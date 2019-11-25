@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-container fluid="fluid">
+    <v-container class="fill-height">
       <v-row>
         <v-col>
           <div  class="display-3">Welcome to my personal page!</div>
@@ -17,10 +17,5 @@
 
 <script>
 export default {
-  data() {
-    return {
-      fluid: true
-    };
-  }
 };
 </script>
