@@ -1,21 +1,42 @@
 <template>
   <div>
-    <v-container class="fill-height">
+    <v-container>
       <v-row>
         <v-col>
-          <div  class="display-3">Welcome to my personal page!</div>
+          <div class="subtitle-1 font-weight-light">My personal page is still under devlopment.</div>
         </v-col>
       </v-row>
       <v-row>
         <v-col>
-      <div class="display-1">My personal page is still under devlopment.</div>
-    </v-col>
-    </v-row>
+          <div class="display-1">Newest Articles</div>
+        </v-col>
+      </v-row>
+      <v-row v-for="post in posts" :key="post.id">
+        <v-col>
+          <Postcard :post="post" />
+        </v-col>
+      </v-row>
     </v-container>
   </div>
 </template>
 
 <script>
+import Postcard from "../components/Postcard";
 export default {
+  components: {
+    Postcard
+  },
+  data() {
+    return {
+      posts: [
+        {
+          id: 1,
+          title: "用Nuxt编写一个个人页面",
+          lastUpdate: "2019-11-30",
+          link: "/posts/ToBuildNuxtBlog"
+        }
+      ]
+    };
+  }
 };
 </script>
