@@ -29,6 +29,12 @@ export default {
   data() {
     return {
       posts: [
+                {
+          id: 2,
+          title: "Docker-compose部署静态页面",
+          lastUpdate: "2019-12-03",
+          link: "/posts/DockerDeploy"
+        },
         {
           id: 1,
           title: "用Nuxt编写一个个人页面",
