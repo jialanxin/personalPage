@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import Postcard from "../components/Postcard";
+import Postcard from "../../components/Postcard";
 export default {
   components: {
     Postcard
@@ -32,7 +32,7 @@ export default {
         {
           id: 1,
           title: "12月读书笔记",
-          lastUpdate: "2019-12-04",
+          lastUpdate: "2019-12-13",
           link: "/notes/ReadingDec2019"
         },
 

@@ -43,7 +43,7 @@ export default {
         {
           icon: "mdi-book-open-variant",
           title: "Reading Notes",
-          to: "/Notes"
+          to: "/notes"
         },
         {
           icon: "mdi-chart-bubble",
