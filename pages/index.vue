@@ -29,7 +29,12 @@ export default {
   data() {
     return {
       posts: [
-
+        {
+          id: 3,
+          title: "Docker-compose部署aria2和filebrowser",
+          lastUpdate: "2019-12-23",
+          link: "/posts/Aria2Filebrowser"
+        },
         {
           id: 2,
           title: "Docker-compose部署静态页面",
