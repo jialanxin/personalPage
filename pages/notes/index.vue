@@ -11,9 +11,16 @@
           <div class="display-1">Newest Articles</div>
         </v-col>
       </v-row>
-      <v-row v-for="post in posts" :key="post.id">
+      <v-row >
         <v-col>
-          <Postcard :post="post" />
+        <v-list two-line>
+          <v-list-item v-for="post in posts" :key=post.id  :to=post.link nuxt>
+            <v-list-content>
+              <v-list-item-title v-text="post.title"></v-list-item-title>
+              <v-list-item-subtitle v-text="post.lastUpdate"></v-list-item-subtitle>
+            </v-list-content>
+          </v-list-item>
+        </v-list>
         </v-col>
       </v-row>
     </v-container>
@@ -21,18 +28,14 @@
 </template>
 
 <script>
-import Postcard from "../../components/Postcard";
 export default {
-  components: {
-    Postcard
-  },
   data() {
     return {
       posts: [
         {
           id: 1,
           title: "12月读书笔记",
-          lastUpdate: "2019-12-13",
+          lastUpdate: "2019-12-26",
           link: "/notes/ReadingDec2019"
         },
 

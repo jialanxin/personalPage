@@ -14,9 +14,10 @@
     </v-navigation-drawer>
     <v-app-bar :clipped-left="clipped" fixed app color="primary" dark>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-
-      <v-toolbar-title v-text="title" />
+      
+      <v-toolbar-title v-text="title"  />
       <v-spacer />
+      <v-btn icon to="/"><v-icon>mdi-home</v-icon></v-btn>
     </v-app-bar>
     <v-content>
       <nuxt />

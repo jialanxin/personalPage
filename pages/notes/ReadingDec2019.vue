@@ -81,6 +81,17 @@
         <p class="font-weight-light">Shang 2011</p>
         <p>pump 350nm probe 400~650nm</p>
         <v-divider />
+        <h2 class="mt-4">PtSe<sub>2</sub>中半导体到半金属转变的非线性光学信号 </h2>
+        <h3>Nonlinear Optical Signatures of the Transition from Semiconductor to Semimetal in PtSe<sub>2</sub> </h3>
+        <p class="font-weight-light">Wang 2019</p>
+        <p>从500nm到2000nm的波长内，吸收光谱和反射光谱，随层数增加，吸收变强。Tauc图外推表明，层数增加，带隙减少(0.87eV到0)，半导体转变为半金属。</p>
+        <p>pump和probe在1040nm(1.19eV),&Delta;T/T的正信号源于Pauli Blocking，负信号源于激发形成的自由载流子对probe光子的增强吸收。</p>
+        <p>有几个途径，半导体情形，单光子吸收加声子（基态到导带底），双光子吸收（基态到导带1），自由电子激发（导带底、导带1到导带2），e-ph（导带2到导带1），e-ph（导带1到导带底），e-h复合（数百ps）；半金属情形，只有单光子吸收，自由电子激发，e-ph，e-h复合（e-e,e-ph介导，13ps）</p>
+        <v-divider />
+        <h2 class="mt-4">通过Mn掺杂减缓狄拉克半金属Cd<sub>3</sub>As<sub>2</sub>中的光生载流子弛豫 </h2>
+        <h3>Slowing down photocarrier relaxation in Dirac semimetal Cd<sub>3</sub>As<sub>2</sub> via Mn doping</h3>
+        <p class="font-weight-light">Sun 2019</p>
+        <p></p>
       </v-col>
     </v-row>
   </v-container>
@@ -91,7 +102,7 @@ export default {
   data() {
     return {
       title: "12月读书笔记",
-      lastUpdate: "2019-12-13"
+      lastUpdate: "2019-12-26"
     };
   }
 };
