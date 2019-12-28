@@ -91,7 +91,11 @@
         <h2 class="mt-4">通过Mn掺杂减缓狄拉克半金属Cd<sub>3</sub>As<sub>2</sub>中的光生载流子弛豫 </h2>
         <h3>Slowing down photocarrier relaxation in Dirac semimetal Cd<sub>3</sub>As<sub>2</sub> via Mn doping</h3>
         <p class="font-weight-light">Sun 2019</p>
-        <p></p>
+        <p>3个样品，纯的，12%Mn掺杂，15.5%Mn掺杂，MBE生长。不同样品间吸收的比较，DoS大的更多。</p>
+        <p>pump 800nm probe 1550nm。未掺杂的3ps单指数恢复。掺杂的三指数拟合，&tau;<sub>3</sub>=588ps~2.8ns，&tau;<sub>2</sub>=30ps。第二个成分是负的</p>
+        <p>pump 1550nm probe 1550nm。&tau;<sub>2</sub>=10ps</p>
+        <p>pump 400nm probe 1550nm。 和800的差不多</p>
+        <p>15.5%的样品probe在1200/1550/3000/4000nm，&tau;<sub>3</sub>=908/588/439/202ps，&tau;<sub>1</sub>源于热电子弛豫，&tau;<sub>3</sub>源于Mn掺杂导致的电子转移，&tau;<sub>2</sub>源于激发态吸收（Excited State Absorption），&tau;<sub>2</sub>probe在越高的地方越快。</p>
       </v-col>
     </v-row>
   </v-container>
