@@ -30,6 +30,11 @@ export default {
       title: "Docker-compose部署Aria2和Filebrowser",
       lastUpdate:"2019-12-23"
     }
+  },
+  head(){
+    return {
+      title: this.title
+    }
   }
   
 }

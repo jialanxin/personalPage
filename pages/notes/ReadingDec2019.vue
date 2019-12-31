@@ -106,8 +106,11 @@ export default {
   data() {
     return {
       title: "12月读书笔记",
-      lastUpdate: "2019-12-26"
+      lastUpdate: "2019-12-29"
     };
+  },
+  head(){
+    return {title:this.title}
   }
 };
 </script>

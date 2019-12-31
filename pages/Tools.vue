@@ -14,6 +14,10 @@
 <script>
 import OpticalUnitConvert from '../components/OpticalUnitConvert'
 export default {
-  components:{OpticalUnitConvert}
+  components:{OpticalUnitConvert},
+  head(){
+    return{
+    title:"个人工具"}
+  }
 }
 </script>

@@ -28,6 +28,11 @@ export default {
       title: "用Nuxt编写一个个人页面",
       lastUpdate:"2019-11-30"
     }
+  },
+  head(){
+    return {
+      title: this.title
+    }
   }
   
 }

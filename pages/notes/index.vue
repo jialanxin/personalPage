@@ -3,11 +3,6 @@
     <v-container>
       <v-row>
         <v-col>
-          <div class="subtitle-1 font-weight-light">My personal page is still under devlopment.</div>
-        </v-col>
-      </v-row>
-      <v-row>
-        <v-col>
           <div class="display-1">Newest Articles</div>
         </v-col>
       </v-row>
@@ -35,12 +30,17 @@ export default {
         {
           id: 1,
           title: "12月读书笔记",
-          lastUpdate: "2019-12-26",
+          lastUpdate: "2019-12-29",
           link: "/notes/ReadingDec2019"
         },
 
       ]
     };
+  },
+  head(){
+    return{
+      title: "读书笔记"
+    }
   }
 };
 </script>

@@ -23,7 +23,7 @@
       <nuxt />
     </v-content>
     <v-footer :fixed="fixed" app>
-      <span>&copy; 2019</span>
+      <span>&copy; 2019 Open sources on <a href="https://github.com/jialanxin/mysite/issues">Github</a> .</span>
     </v-footer>
   </v-app>
 </template>

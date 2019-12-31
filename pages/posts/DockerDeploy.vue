@@ -32,6 +32,11 @@ export default {
       title: "Docker-compose部署静态页面",
       lastUpdate:"2019-12-03"
     }
+  },
+  head(){
+    return {
+      title: this.title
+    }
   }
   
 }
