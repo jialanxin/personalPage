@@ -33,6 +33,12 @@ export default {
     return {
       posts: [
         {
+          id: 4,
+          title: "安装ArchWSL",
+          lastUpdate: "2020-03-02",
+          link: "/posts/InstallArchWSL"
+        },
+        {
           id: 3,
           title: "Docker-compose部署aria2和filebrowser",
           lastUpdate: "2019-12-23",
