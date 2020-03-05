@@ -33,6 +33,12 @@ export default {
     return {
       posts: [
         {
+          id: 5,
+          title: "记录-广州签证之行",
+          lastUpdate: "2020-03-05",
+          link: "/posts/VisaGuangzhou"
+        },
+        {
           id: 4,
           title: "安装ArchWSL",
           lastUpdate: "2020-03-02",
