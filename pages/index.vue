@@ -33,6 +33,12 @@ export default {
     return {
       posts: [
         {
+          id: 6,
+          title: "为Caddy2设置HTTPS",
+          lastUpdate: "2020-03-06",
+          link: "/posts/Caddy2HTTPS"
+        },
+        {
           id: 5,
           title: "记录-广州签证之行",
           lastUpdate: "2020-03-05",
