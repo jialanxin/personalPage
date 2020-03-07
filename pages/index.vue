@@ -14,13 +14,20 @@
       <v-row >
         <v-col>
         <v-list two-line>
-          <v-list-item v-for="post in posts" :key=post.id  :to=post.link nuxt>
+          <v-list-item v-for="post in shownPosts" :key=post.id  :to=post.link nuxt>
             <v-list-content>
               <v-list-item-title v-text="post.title"></v-list-item-title>
               <v-list-item-subtitle v-text="post.lastUpdate"></v-list-item-subtitle>
             </v-list-content>
           </v-list-item>
         </v-list>
+        </v-col>
+      </v-row>
+      <v-row>
+        <v-col>
+          <v-pagination v-model="page" :length="numOfPages">
+
+          </v-pagination>
         </v-col>
       </v-row>
     </v-container>
@@ -31,7 +38,14 @@
 export default {
   data() {
     return {
+      page :1,
       posts: [
+        {
+          id: 7,
+          title: "添加分页",
+          lastUpdate: "2020-03-07",
+          link: "/posts/AddPagination"
+        },
         {
           id: 6,
           title: "为Caddy2设置HTTPS",
@@ -74,6 +88,19 @@ export default {
   head(){
     return{
       title:"首页"
+    }
+  },
+  computed:{
+    numOfPages: function(){
+      return Math.ceil(this.posts.length/5)
+    },
+    shownPosts: function(){
+      var beginIndex = (this.page-1)*5
+      var endIndex = this.page*5
+      if (endIndex > this.page.length-1){
+        endIndex = this.page.length
+      }
+      return this.posts.slice(beginIndex,endIndex)
     }
   }
 };
