@@ -41,6 +41,18 @@ export default {
       page :1,
       posts: [
         {
+          id: 9,
+          title: "Procedure of dry transfer",
+          lastUpdate: "2020-03-10",
+          link: "/posts/ProcedureOfDryTransfer"
+        },        
+        {
+          id: 8,
+          title: "如何制作PDMS",
+          lastUpdate: "2020-03-10",
+          link: "/posts/PreparePDMS"
+        },
+        {
           id: 7,
           title: "添加分页",
           lastUpdate: "2020-03-07",
