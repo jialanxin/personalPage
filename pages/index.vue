@@ -41,6 +41,12 @@ export default {
       page :1,
       posts: [
         {
+          id: 10,
+          title: "Git速查表",
+          lastUpdate: "2020-03-16",
+          link: "/posts/GitCheatSheet"
+        },  
+        {
           id: 9,
           title: "Procedure of dry transfer",
           lastUpdate: "2020-03-10",
