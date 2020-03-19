@@ -14,16 +14,21 @@
     </v-navigation-drawer>
     <v-app-bar :clipped-left="clipped" fixed app color="primary" dark>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      
-      <v-toolbar-title v-text="title"  />
+
+      <v-toolbar-title v-text="title" />
       <v-spacer />
-      <v-btn icon to="/"><v-icon>mdi-home</v-icon></v-btn>
+      <v-btn icon to="/">
+        <v-icon>mdi-home</v-icon>
+      </v-btn>
     </v-app-bar>
     <v-content>
       <nuxt />
     </v-content>
     <v-footer :fixed="fixed" app>
-      <span>&copy; 2019-2020 Open sources on <a href="https://github.com/jialanxin/mysite/issues">Github</a> .</span>
+      <span>
+        &copy; 2019-2020 Open sources on
+        <a href="https://github.com/jialanxin/mysite/issues">Github</a> .
+      </span>
     </v-footer>
   </v-app>
 </template>
@@ -45,6 +50,11 @@ export default {
           icon: "mdi-book-open-variant",
           title: "Reading Notes",
           to: "/notes"
+        },
+        {
+          icon: "mdi-timeline-text",
+          title: "Moments",
+          to: "/moments"
         },
         {
           icon: "mdi-chart-bubble",
