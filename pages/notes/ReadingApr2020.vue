@@ -17,8 +17,8 @@
 export default {
       data() {
     return {
-      title: "2月读书笔记",
-      lastUpdate: "2020-02-07"
+      title: "4月读书笔记",
+      lastUpdate: "2020-04-01"
     };
   },
   head(){

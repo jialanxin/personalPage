@@ -3,11 +3,6 @@
     <v-container>
       <v-row>
         <v-col>
-          <div class="subtitle-1 font-weight-light">My personal page is still under devlopment.</div>
-        </v-col>
-      </v-row>
-      <v-row>
-        <v-col>
           <div class="display-1">Newest Articles</div>
         </v-col>
       </v-row>

@@ -44,7 +44,7 @@ export default {
   },
   head() {
     return {
-      title: "个人工具"
+      title: "个人动态"
     };
   }
 };

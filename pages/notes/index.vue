@@ -29,9 +29,9 @@ export default {
       posts: [
         {
           id: 2,
-          title: "2月读书笔记",
-          lastUpdate: "2020-02-07",
-          link: "/notes/ReadingFeb2020"
+          title: "4月读书笔记",
+          lastUpdate: "2020-04-01",
+          link: "/notes/ReadingApr2020"
         },
 
         {
