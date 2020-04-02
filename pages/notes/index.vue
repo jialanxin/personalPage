@@ -30,7 +30,7 @@ export default {
         {
           id: 2,
           title: "4月读书笔记",
-          lastUpdate: "2020-04-01",
+          lastUpdate: "2020-04-02",
           link: "/notes/ReadingApr2020"
         },
 
