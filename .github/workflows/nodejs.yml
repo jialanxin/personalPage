@@ -10,8 +10,7 @@ on:
     branches: [ master ]
 
 jobs:
-  build:
-
+  nuxt:
     runs-on: ubuntu-latest
 
     steps:
@@ -28,4 +27,25 @@ jobs:
       with: 
         name: dist
         path: dist/ 
+  docker:
+    needs: nuxt
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/download-artifact@v1
+      with:
+        name: dist
+    - name: download caddy
+      run: |
+        curl -L -o caddy2.tar.gz https://github.com/caddyserver/caddy/releases/download/v2.0.0-rc.1/caddy_2.0.0-rc.1_Linux_x86_64.tar.gz
+        tar xf caddy2.tar.gz
+    - name: build Docker
+      run: docker build . --file Dockerfile --tag personalpage
+    - name: publish docker
+      run: |
+        docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
+        docker tag personalpage mishidexingyun/personalpage
+        docker push mishidexingyun/personalpage
+
+
     

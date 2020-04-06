@@ -1,0 +1,9 @@
+version: "3"
+services:
+    web:
+        image: mishidexingyun/personalpage
+        volumes:
+            - "./keys:/app/key"
+        ports:
+            - "80:80"
+            - "443:443"

@@ -12,7 +12,7 @@
     </v-row>
     <v-row>
       <v-col>
-        <v-expansion-panels>
+        <v-expansion-panels multiple>
           <v-expansion-panel>
             <v-expansion-panel-header>
               <v-row>
