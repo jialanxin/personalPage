@@ -29,7 +29,7 @@ export default {
   data() {
     return {
       title: "Git速查表",
-      lastUpdate: "2020-03-16",
+      lastUpdate: "2020-04-07",
       open: [],
       items: [
         {

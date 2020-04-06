@@ -38,7 +38,7 @@ export default {
         {
           id: 10,
           title: "Git速查表",
-          lastUpdate: "2020-03-16",
+          lastUpdate: "2020-04-07",
           link: "/posts/GitCheatSheet"
         },  
         {
