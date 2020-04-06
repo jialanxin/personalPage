@@ -74,7 +74,12 @@
                 </v-col>
               </v-row>
             </v-expansion-panel-header>
-            <v-expansion-panel-content></v-expansion-panel-content>
+            <v-expansion-panel-content>
+              <p>所有的异质结中，原TMD的PL峰都消失了，表明层间作用产生了新的非辐射复合途径提供给了这些光生激子们。</p>
+              <p>激光照过之后，层间作用就被打断了，PL峰恢复，但位置有所不同，退火之后层间作用恢复</p>
+              <p>Bi2Se3可以长在好多种TMD上，表明它的晶格可塑性好，适配性高</p>
+              <p>尽管晶格性质差不多，Bi2Te3和Sb2Se3都不会使得TMD的PL峰消失，不明原因。Bi2Se3和TMD的层间作用是特殊的</p>
+            </v-expansion-panel-content>
           </v-expansion-panel>
         </v-expansion-panels>
       </v-col>
@@ -87,7 +92,7 @@ export default {
   data() {
     return {
       title: "4月读书笔记",
-      lastUpdate: "2020-04-04"
+      lastUpdate: "2020-04-06"
     };
   },
   head() {
