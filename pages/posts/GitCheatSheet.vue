@@ -242,7 +242,13 @@ export default {
                       name: "合并某分支到当前分支，并禁用fast forward",
                       cmd: "git merge --no-ff 分支名"
                     },
-                    { id: 60, name: "不建议使用变基", cmd: "git rebase" }
+
+                    { id: 60, name: "不建议使用变基", cmd: "git rebase" },
+                    {
+                      id: 93,
+                      name: "合并commit信息混乱的分支，合并前建议先变基",
+                      cmd: "git merge --squash 分支名"
+                    }
                   ]
                 },
                 {
@@ -269,6 +275,11 @@ export default {
                       id: 65,
                       name: "删除远程分支（建议界面操作）",
                       cmd: "git push origin -d 分支名"
+                    },
+                    {
+                      id: 94,
+                      name: "删除远程分支后的删除本地分支",
+                      cmd: "git fetch -p"
                     }
                   ]
                 },
