@@ -1,7 +1,7 @@
 FROM alpine
 WORKDIR /app
-COPY ./caddy .
+COPY ./caddy /usr/bin
 COPY ./conf ./conf
 COPY ./dist ./dist
-RUN mv caddy /usr/bin  && mkdir key
+RUN mkdir key
 CMD ["caddy","run","--config","./conf/Caddyfile","--adapter","caddyfile"]
