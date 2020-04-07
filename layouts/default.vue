@@ -26,8 +26,8 @@
     </v-content>
     <v-footer :fixed="fixed" app>
       <span>
-        &copy; 2019-2020 Open sources on
-        <a href="https://github.com/jialanxin/mysite/issues">Github</a> .
+        &copy; 2019-2020 Open sources and contact me on
+        <a href="https://github.com/jialanxin/personalPage/issues">Github</a> .
       </span>
     </v-footer>
   </v-app>
