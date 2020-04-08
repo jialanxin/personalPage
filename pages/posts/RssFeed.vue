@@ -29,12 +29,10 @@ export default {
       lastUpdate: ""
     };
   },
-  mounted() {
-    json.forEach(post => {
-      if (post.title === this.title) {
-        this.lastUpdate = post.lastUpdate;
-      }
-    });
+  created() {
+    this.lastUpdate = json.find(post => {
+      return post.title === this.title
+    }).lastUpdate;
   },
   head() {
     return {

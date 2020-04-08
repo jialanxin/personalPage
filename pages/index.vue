@@ -10,10 +10,10 @@
         <v-col>
           <v-list two-line>
             <v-list-item v-for="post in shownPosts" :key="post.id" :to="post.link" nuxt>
-              <v-list-content>
+              <v-list-item-content>
                 <v-list-item-title v-text="post.title"></v-list-item-title>
                 <v-list-item-subtitle v-text="post.lastUpdate"></v-list-item-subtitle>
-              </v-list-content>
+              </v-list-item-content>
             </v-list-item>
           </v-list>
         </v-col>

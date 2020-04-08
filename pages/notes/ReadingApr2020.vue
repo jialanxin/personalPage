@@ -13,29 +13,13 @@
     <v-row>
       <v-col>
         <v-expansion-panels multiple>
-          <v-expansion-panel>
-            <v-expansion-panel-header>
-              <v-row>
-                <v-col>
-                  <v-row>
-                    <v-col class="pa-0">
-                      <p class="font-weight-black title ma-0">激光可调的外延生长的MoS2和Bi2Se3异质结</p>
-                    </v-col>
-                  </v-row>
-                  <v-row>
-                    <v-col class="pa-0">
-                      <p
-                        class="caption ma-0"
-                      >Tunable and laser-reconfigurable 2D heterocrystals obtained by epitaxial stacking of crystallographically incommensurate Bi2Se3 and MoS2 atomic layers</p>
-                    </v-col>
-                  </v-row>
-                </v-col>
-                <v-col cols="auto">
-                  <p class="font-weight-light">Vargas 2017</p>
-                </v-col>
-              </v-row>
-            </v-expansion-panel-header>
-            <v-expansion-panel-content>
+          <ReadingPanel>
+            <template v-slot:chinese_title>激光可调的外延生长的MoS2和Bi2Se3异质结</template>
+            <template
+              v-slot:english_title
+            >Tunable and laser-reconfigurable 2D heterocrystals obtained by epitaxial stacking of crystallographically incommensurate Bi2Se3 and MoS2 atomic layers</template>
+            <template v-slot:author>Vargas 2017</template>
+            <template v-slot:content>
               <p>MoS2三层和Bi2Se3五层的垂直异质结</p>
               <p>Bi2Se3在几个纳米下有2.5eV的可调扩展带隙（正常体带隙300meV）和多个PL峰</p>
               <p>1TL+1QL复合体有一个0.37eV的间接带隙，QL变多，带隙变窄。前体和异质结能带结构的不同，归咎于很强的层间作用，虽然晶格不那么适配。</p>
@@ -50,37 +34,22 @@
               <p>SEAD显示，激光照射的部分，QL层分为更小的区域，每个区域Bi2Se3取向不一致，可能部分脱离MoS2表面。Bi2Se3本身的特征峰在2.5eV以上，不在观测范围内。</p>
               <p>相比于单层MoS2，异质结对于AB激子的透过光谱幅度变小并发生红移，这与多层MoS2是一致的。说明层间作用相似，红移来自于带隙变小</p>
               <p>激光照过的AB激子红移依然保持，说明Bi2Se3还依附在MoS2上，没有脱离。SEAD也发现，只有方向变化，没有多出来的衍射点</p>
-            </v-expansion-panel-content>
-          </v-expansion-panel>
-          <v-expansion-panel>
-            <v-expansion-panel-header>
-              <v-row>
-                <v-col>
-                  <v-row>
-                    <v-col class="pa-0">
-                      <p class="font-weight-black title ma-0">Bi2Se3和各种TMD异质结</p>
-                    </v-col>
-                  </v-row>
-                  <v-row>
-                    <v-col class="pa-0">
-                      <p
-                        class="caption ma-0"
-                      >Widely tunable Bi2Se3 /transition metal dichalcogenide 2D heterostructures for write-readerase-reuse applications</p>
-                    </v-col>
-                  </v-row>
-                </v-col>
-                <v-col cols="auto">
-                  <p class="font-weight-light">Hennighausen 2019</p>
-                </v-col>
-              </v-row>
-            </v-expansion-panel-header>
-            <v-expansion-panel-content>
+            </template>
+          </ReadingPanel>
+          <ReadingPanel>
+            <template v-slot:chinese_title>Bi2Se3和各种TMD异质结</template>
+            <template
+              v-slot:english_title
+            >Widely tunable Bi2Se3 /transition metal dichalcogenide 2D heterostructures for write-readerase-reuse applications</template>
+            <template v-slot:author>Hennighausen 2019</template>
+            <template v-slot:content>
               <p>所有的异质结中，原TMD的PL峰都消失了，表明层间作用产生了新的非辐射复合途径提供给了这些光生激子们。</p>
               <p>激光照过之后，层间作用就被打断了，PL峰恢复，但位置有所不同，退火之后层间作用恢复</p>
               <p>Bi2Se3可以长在好多种TMD上，表明它的晶格可塑性好，适配性高</p>
-              <p>尽管晶格性质差不多，Bi2Te3和Sb2Se3都不会使得TMD的PL峰消失，不明原因。Bi2Se3和TMD的层间作用是特殊的</p>
-            </v-expansion-panel-content>
-          </v-expansion-panel>
+              <p>尽管晶格性质差不多，Bi2Te3和Sb2Se3都不会使得TMD的PL峰消失，不明原因。Bi2Se3和TMD的层间作用是特殊的。这两种TI都不能在TMD上形成良好的异质结接触，PL部分降低可能是由于TI的高反射率使得TMD的进光量减少。</p>
+              <p></p>
+            </template>
+          </ReadingPanel>
         </v-expansion-panels>
       </v-col>
     </v-row>
@@ -88,11 +57,13 @@
 </template>
 
 <script>
+import ReadingPanel from "../../components/ReadingPanel.vue";
 export default {
+  components: { ReadingPanel },
   data() {
     return {
       title: "4月读书笔记",
-      lastUpdate: "2020-04-06"
+      lastUpdate: "2020-04-07"
     };
   },
   head() {

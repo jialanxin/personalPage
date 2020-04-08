@@ -15,8 +15,7 @@
         <p>在其他网站上看到一张Git速查表，不好导出保存，所以重新写一遍。</p>
         <v-treeview :items="items" :open="open">
           <template v-slot:label="{item}">
-            {{item.name}}
-            <kbd v-if="item.cmd">{{item.cmd}}</kbd>
+            <span v-html="item.name"></span>
           </template>
         </v-treeview>
       </v-col>
@@ -25,11 +24,12 @@
 </template>
 
 <script>
+import json from "../posts.json";
 export default {
   data() {
     return {
       title: "Git速查表",
-      lastUpdate: "2020-04-07",
+      lastUpdate: "",
       open: [],
       items: [
         {
@@ -42,12 +42,11 @@ export default {
               children: [
                 {
                   id: 3,
-                  name: "1.进入需要创建代码库的文件夹",
-                  cmd: "cd 文件路径"
+                  name: "1.进入需要创建代码库的文件夹 <kbd>cd 文件路径</kbd>"
                 },
-                { id: 4, name: "2.创建/初始化仓库", cmd: "git init" },
-                { id: 5, name: "3.拉取远程仓库到本地", cmd: "git clone" },
-                { id: 6, name: "建议使用git clone" }
+                { id: 4, name: "2.创建/初始化仓库 <kbd>git init</kbd>" },
+                { id: 5, name: "3.拉取远程仓库到本地 <kbd>git clone</kbd>" },
+                { id: 6, name: "建议使用<kbd>git clone</kbd>" }
               ]
             },
             {
@@ -58,9 +57,12 @@ export default {
                   id: 8,
                   name: "1.添加文件到暂存区",
                   children: [
-                    { id: 9, name: "添加单个文件", cmd: "git add 文件名" },
-                    { id: 10, name: "添加所有文件", cmd: "git add ." },
-                    { id: 11, name: "会忽略.gitinore中的文件 以及 空目录" }
+                    { id: 9, name: "添加单个文件 <kbd>git add 文件名</kbd>" },
+                    { id: 10, name: "添加所有文件 <kbd>git add .</kbd>" },
+                    {
+                      id: 11,
+                      name: "会忽略<code>.gitinore</code>中的文件 以及 空目录"
+                    }
                   ]
                 },
                 {
@@ -69,7 +71,7 @@ export default {
                   children: [
                     {
                       id: 13,
-                      cmd: "git commit",
+                      name: "<kbd>git commit</kbd>",
                       children: [
                         { id: 14, name: "填写commit message" },
                         { id: 15, name: "保存" }
@@ -77,14 +79,14 @@ export default {
                     },
                     {
                       id: 16,
-                      name: "不建议使用",
-                      cmd: 'git commit -m "commit message"'
+                      name:
+                        '不建议使用<kbd>git commit -m "commit message"</kbd>'
                     },
                     { id: 17, name: "提交要遵循commit message的规范" }
                   ]
                 },
-                { id: 18, name: "3.查看工作区状态", cmd: "git status" },
-                { id: 19, name: "4.对比工作区文件变化", cmd: "git diff" }
+                { id: 18, name: "3.查看工作区状态 <kbd>git status</kbd>" },
+                { id: 19, name: "4.对比工作区文件变化 <kbd>git diff</kbd>" }
               ]
             },
             {
@@ -95,16 +97,22 @@ export default {
                   id: 21,
                   name: "1.配置全局用户名和邮箱",
                   children: [
-                    { id: 22, cmd: "git config --global user.name 用户名" },
-                    { id: 23, cmd: "git config --global user.email 邮箱" }
+                    {
+                      id: 22,
+                      name: "<kbd>git config --global user.name 用户名</kbd>"
+                    },
+                    {
+                      id: 23,
+                      name: "<kbd>git config --global user.email 邮箱</kbd>"
+                    }
                   ]
                 },
                 {
                   id: 24,
                   name: "2.配置当前仓库用户名和邮箱",
                   children: [
-                    { id: 25, cmd: "git config user.name 用户名" },
-                    { id: 26, cmd: "git config user.email 邮箱" }
+                    { id: 25, name: "<kbd>git config user.name 用户名</kbd>" },
+                    { id: 26, name: "<kbd>git config user.email 邮箱</kbd>" }
                   ]
                 }
               ]
@@ -119,8 +127,8 @@ export default {
               id: 28,
               name: "查看不同版本/提交",
               children: [
-                { id: 29, name: "1.提交详情", cmd: "git log" },
-                { id: 30, name: "2.提交简介", cmd: "git log --oneline" }
+                { id: 29, name: "1.提交详情 <kbd>git log</kbd>" },
+                { id: 30, name: "2.提交简介 <kbd>git log --oneline</kbd>" }
               ]
             },
             {
@@ -129,23 +137,19 @@ export default {
               children: [
                 {
                   id: 32,
-                  name: "1.回退到当前最新提交",
-                  cmd: "git reset --hard HEAD"
+                  name: "1.回退到当前最新提交 <kbd>git reset --hard HEAD</kbd>"
                 },
                 {
                   id: 33,
-                  name: "2.回退到上次提交",
-                  cmd: "git reset --hard HEAD^"
+                  name: "2.回退到上次提交 <kbd>git reset --hard HEAD^</kbd>"
                 },
                 {
                   id: 34,
-                  name: "3.回退到上n次提交",
-                  cmd: "git reset --hard HRAD~n"
+                  name: "3.回退到上n次提交 <kbd>git reset --hard HRAD~n</kbd>"
                 },
                 {
                   id: 35,
-                  name: "4.回退到某次提交",
-                  cmd: "git reset --hard commitid"
+                  name: "4.回退到某次提交 <kbd>git reset --hard commitid</kbd>"
                 }
               ]
             },
@@ -155,13 +159,11 @@ export default {
               children: [
                 {
                   id: 37,
-                  name: "1.查看历史提交以及被退回的提交",
-                  cmd: "git reflog"
+                  name: "1.查看历史提交以及被退回的提交 <kbd>git reflog</kbd>"
                 },
                 {
                   id: 38,
-                  name: "2.回到未来版本",
-                  cmd: "git commit --hard commitid"
+                  name: "2.回到未来版本 <kbd>git commit --hard commitid</kbd>"
                 }
               ]
             },
@@ -171,8 +173,7 @@ export default {
               children: [
                 {
                   id: 40,
-                  name: "1.工作区内的撤销",
-                  cmd: "git checkout 文件名"
+                  name: "1.工作区内的撤销 <kbd>git checkout 文件名</kbd>"
                 },
                 {
                   id: 41,
@@ -180,10 +181,10 @@ export default {
                   children: [
                     {
                       id: 42,
-                      name: "从暂存区回退到工作区",
-                      cmd: "git reset HEAD 文件"
+                      name:
+                        "从暂存区回退到工作区 <kbd>git reset HEAD 文件</kbd>"
                     },
-                    { id: 43, name: "撤销修改", cmd: "git checkout 文件名" }
+                    { id: 43, name: "撤销修改 <kbd>git checkout 文件名</kbd>" }
                   ]
                 },
                 { id: 44, name: "提交到了版本库->参见回退版本/提交" }
@@ -196,20 +197,19 @@ export default {
                 {
                   id: 46,
                   name:
-                    "从版本库删除文件（等价于rm 文件 && git add 文件）,删除后需要提交",
-                  cmd: "git rm 文件名"
+                    "从版本库删除文件 <kbd>git rm 文件名</kbd>（等价于<kbd>rm 文件 && git add 文件</kbd>）,删除后需要<kbd>git commit</kbd>提交"
                 },
                 { id: 47, name: "撤销删除 同 撤销修改" },
                 {
                   id: 48,
-                  name: "从版本库中删除文件，但本地不删除",
-                  cmd: "git rm --cached 文件名"
+                  name:
+                    "从版本库中删除文件，但本地不删除 <kbd>git rm --cached 文件名</kbd>"
                 }
               ]
             },
-            { id: 49, name: "重命名文件/文件夹", cmd: "git mv" },
+            { id: 49, name: "重命名文件/文件夹 <kbd>git mv</kbd>" },
             { id: 50, name: "工作现场暂存 同 分支-工作现场暂存" },
-            { id: 51, name: "忽略文件 .gitignore文件" }
+            { id: 51, name: "忽略文件 <code>.gitignore</code>文件" }
           ]
         },
         {
@@ -232,22 +232,22 @@ export default {
                     }
                   ]
                 },
-                { id: 57, name: "2.切换分支", cmd: "git checkout 分支名" },
+                { id: 57, name: "2.切换分支 <kbd>git checkout 分支名</kbd>" },
                 {
                   id: 58,
                   name: "3.合并分支",
                   children: [
                     {
                       id: 59,
-                      name: "合并某分支到当前分支，并禁用fast forward",
-                      cmd: "git merge --no-ff 分支名"
+                      name:
+                        "合并某分支到当前分支，并禁用fast forward <kbd>git merge --no-ff 分支名</kbd>"
                     },
 
-                    { id: 60, name: "不建议使用变基", cmd: "git rebase" },
+                    { id: 60, name: "不建议使用变基 <kbd>git rebase</kbd>" },
                     {
                       id: 93,
-                      name: "合并commit信息混乱的分支，合并前建议先变基",
-                      cmd: "git merge --squash 分支名"
+                      name:
+                        "合并commit信息混乱的分支，合并前建议先变基 <kbd>git merge --squash 分支名</kbd>"
                     }
                   ]
                 },
@@ -261,25 +261,23 @@ export default {
                       children: [
                         {
                           id: 63,
-                          name: "删除未合并分支",
-                          cmd: "git branch -D 分支名"
+                          name: "删除未合并分支 <kbd>git branch -D 分支名</kbd>"
                         },
                         {
                           id: 64,
-                          name: "删除已合并分支",
-                          cmd: "git branch -d 分支名"
+                          name: "删除已合并分支 <kbd>git branch -d 分支名</kbd>"
                         }
                       ]
                     },
                     {
                       id: 65,
-                      name: "删除远程分支（建议界面操作）",
-                      cmd: "git push origin -d 分支名"
+                      name:
+                        "删除远程分支（建议界面操作）<kbd>git push origin -d 分支名</kbd>"
                     },
                     {
                       id: 94,
-                      name: "删除远程分支后的删除本地分支",
-                      cmd: "git fetch -p"
+                      name:
+                        "删除远程分支后的删除本地分支 <kbd>git fetch -p</kbd>"
                     }
                   ]
                 },
@@ -287,8 +285,8 @@ export default {
                   id: 66,
                   name: "5.查看分支",
                   children: [
-                    { id: 67, name: "查看当前分支", cmd: "git branch" },
-                    { id: 68, name: "查看所有分支", cmd: "git branch -a" }
+                    { id: 67, name: "查看当前分支 <kbd>git branch</kbd>" },
+                    { id: 68, name: "查看所有分支 <kbd>git branch -a</kbd>" }
                   ]
                 },
                 {
@@ -302,8 +300,7 @@ export default {
                     { id: 74, name: "暂存并提交到版本库" },
                     {
                       id: 75,
-                      name: "查看分支状态",
-                      cmd: "git log --graph --oneline"
+                      name: "查看分支状态 <kbd>git log --graph --oneline</kbd>"
                     }
                   ]
                 }
@@ -313,17 +310,17 @@ export default {
               id: 76,
               name: "工作现场暂存",
               children: [
-                { id: 77, name: "1.暂存工作现场", cmd: "git stash" },
+                { id: 77, name: "1.暂存工作现场 <kbd>git stash</kbd>" },
                 {
                   id: 78,
                   name: "2.恢复工作现场",
                   children: [
-                    { id: 79, name: "恢复", cmd: "git stash apply" },
-                    { id: 80, name: "删除", cmd: "git stash drop" },
+                    { id: 79, name: "恢复 <kbd>git stash apply</kbd>" },
+                    { id: 80, name: "删除 <kbd>git stash drop</kbd>" },
                     {
                       id: 81,
-                      name: "恢复到工作区内并删除储藏区",
-                      cmd: "git stash pop"
+                      name:
+                        "恢复到工作区内并删除储藏区 <kbd>git stash pop</kbd>"
                     }
                   ]
                 }
@@ -335,23 +332,22 @@ export default {
               children: [
                 {
                   id: 83,
-                  name: "1.查看远程库信息（-v 更详细）",
-                  cmd: "git remote"
+                  name: "1.查看远程库信息 <kbd>git remote</kbd>（-v 更详细）"
                 },
                 {
                   id: 84,
                   name: "2.更新/推送远程库",
                   children: [
-                    { id: 85, name: "更新远程库信息", cmd: "git fetch" },
+                    { id: 85, name: "更新远程库信息 <kbd>git fetch</kbd>" },
                     {
                       id: 86,
-                      name: "远程库更新到本地（等价于 fetch + merge）",
-                      cmd: "git pull"
+                      name:
+                        "远程库更新到本地 <kbd>git pull</kbd>（等价于 fetch + merge）"
                     },
                     {
                       id: 87,
-                      name: "本地分支推送到远程库",
-                      cmd: "git push origin 分支名"
+                      name:
+                        "本地分支推送到远程库 <kbd>git push origin 分支名</kbd>"
                     }
                   ]
                 },
@@ -361,13 +357,13 @@ export default {
                   children: [
                     {
                       id: 89,
-                      name: "使用远程分支A创建本地分支",
-                      cmd: "git checkout -b A origin/A"
+                      name:
+                        "使用远程分支A创建本地分支 <kbd>git checkout -b A origin/A</kbd>"
                     },
                     {
                       id: 90,
-                      name: "将本地分支与远程分支关联",
-                      cmd: "git branch --set-upstream A origin/A"
+                      name:
+                        "将本地分支与远程分支关联 <kbd>git branch --set-upstream A origin/A</kbd>"
                     }
                   ]
                 }
@@ -379,6 +375,11 @@ export default {
         { id: 92, name: "其他生僻命令" }
       ]
     };
+  },
+  created() {
+    this.lastUpdate = json.find(post => {
+      return post.title === this.title;
+    }).lastUpdate;
   },
   head() {
     return {
