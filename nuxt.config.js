@@ -1,4 +1,5 @@
 import colors from 'vuetify/es5/util/colors'
+import json from './pages/posts.json'
 
 export default {
   mode: 'universal',
@@ -30,7 +31,7 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
-  { src: '~plugins/ga.js', mode: 'client' }
+    { src: '~plugins/ga.js', mode: 'client' }
   ],
   /*
   ** Nuxt.js dev-modules
@@ -42,7 +43,30 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
+    '@nuxtjs/feed'
   ],
+  feed: [
+    {
+      path: '/feed.xml',
+      type: 'rss2',
+      create(feed) {
+        feed.options = {
+          title: 'My personal page',
+          link: 'https://lxj230.xyz/feed.xml',
+          description: 'Welcome to my personal page'
+        }
+        json.forEach((post) => {
+          feed.addItem({
+            title: post.title,
+            id: post.id,
+            link: `https://lxj230.xyz${post.link}`,
+            description: post.lastUpdate
+          })
+        })
+      },
+    }
+  ],
+
   /*
   ** vuetify module configuration
   ** https://github.com/nuxt-community/vuetify-module
@@ -71,7 +95,7 @@ export default {
     /*
     ** You can extend webpack config here
     */
-    extend (config, ctx) {
+    extend(config, ctx) {
     }
   }
 }

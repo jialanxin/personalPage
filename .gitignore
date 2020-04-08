@@ -92,3 +92,6 @@ sw.*
 # key and pem
 *.key
 *.pem
+
+# feed xml
+feed.xml

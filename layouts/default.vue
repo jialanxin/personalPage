@@ -17,6 +17,9 @@
 
       <v-toolbar-title v-text="title" />
       <v-spacer />
+      <v-btn icon href="/feed.xml">
+        <v-icon>mdi-rss</v-icon>
+      </v-btn>
       <v-btn icon to="/">
         <v-icon>mdi-home</v-icon>
       </v-btn>
