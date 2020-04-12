@@ -12,7 +12,7 @@
     </v-row>
     <v-row>
       <v-col>
-          <slot name="content"></slot>
+        <slot name="content"></slot>
       </v-col>
     </v-row>
   </v-container>
@@ -21,10 +21,9 @@
 <script>
 import json from "../pages/posts.json";
 export default {
-    props:["posttitle"],
+  props: ["posttitle"],
   data() {
     return {
-      
       lastUpdate: ""
     };
   },
@@ -32,6 +31,6 @@ export default {
     this.lastUpdate = json.find(post => {
       return post.title === this.posttitle;
     }).lastUpdate;
-  },
+  }
 };
 </script>
