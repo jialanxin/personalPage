@@ -43,11 +43,16 @@
             >Widely tunable Bi2Se3 /transition metal dichalcogenide 2D heterostructures for write-readerase-reuse applications</template>
             <template v-slot:author>Hennighausen 2019</template>
             <template v-slot:content>
-              <p>所有的异质结中，原TMD的PL峰都消失了，表明层间作用产生了新的非辐射复合途径提供给了这些光生激子们。</p>
+              <p>所有的异质结中，原TMD的PL峰都消失了，表明层间作用产生了新的非辐射复合途径提供给了这些光生激子们。因为能带杂化和新形成的间接带隙</p>
               <p>激光照过之后，层间作用就被打断了，PL峰恢复，但位置有所不同，退火之后层间作用恢复</p>
               <p>Bi2Se3可以长在好多种TMD上，表明它的晶格可塑性好，适配性高</p>
               <p>尽管晶格性质差不多，Bi2Te3和Sb2Se3都不会使得TMD的PL峰消失，不明原因。Bi2Se3和TMD的层间作用是特殊的。这两种TI都不能在TMD上形成良好的异质结接触，PL部分降低可能是由于TI的高反射率使得TMD的进光量减少。</p>
-              <p></p>
+              <p>这篇文章把上一篇提到的激光照射后的变化归咎于氧的插入导致层分离</p>
+              <p>其他文章使用了TEM比较层间作用，发现Bi2Se3和MoSe2最强。TEM和SEM的电子束还可以改变构型和改变光学性质</p>
+              <p>激光造成的表面颜色变化可以维持数月，原因也不是因为Bi2Se3被激光移除了，样品的高度没有发生改变</p>
+              <p>异质结中存在暗激子，即非辐射复合的激子，从透过光谱等证据中可获得相关信息。同上一篇文章。至于charge transfer这种不同机理的东西，激光暴露过的样品PL就恢复了，一定程度上否认了charge transfer的存在，进一步确认需要其他证据</p>
+              <p>异质结中的层间作用会减小TMD的Raman峰高。Bi2Se3峰在照射过后减小，可能是单晶体取向旋转变为多晶体</p>
+              <p>不同能量的激光，给恢复的PL峰带来了不同的位置和峰强。从中解析出A激子和A-三激子的计数和结合能变化。带隙宽度和结合能都有变化，导致红蓝移都存在。带隙的变化取决于总体能带的变化，结合能的变化，取决于激子所处的复杂的介电环境的不同。</p>
             </template>
           </ReadingPanel>
         </v-expansion-panels>
@@ -63,7 +68,7 @@ export default {
   data() {
     return {
       title: "4月读书笔记",
-      lastUpdate: "2020-04-07"
+      lastUpdate: "2020-04-14"
     };
   },
   head() {
