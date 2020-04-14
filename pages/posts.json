@@ -1,5 +1,11 @@
 [
   {
+    "id": 15,
+    "title": "人类观察",
+    "lastUpdate": "2020-04-15",
+    "link": "/posts/Thought2"
+  },
+  {
     "id": 14,
     "title": "创建一个aur包",
     "lastUpdate": "2020-04-13",
