@@ -55,6 +55,18 @@
               <p>不同能量的激光，给恢复的PL峰带来了不同的位置和峰强。从中解析出A激子和A-三激子的计数和结合能变化。带隙宽度和结合能都有变化，导致红蓝移都存在。带隙的变化取决于总体能带的变化，结合能的变化，取决于激子所处的复杂的介电环境的不同。</p>
             </template>
           </ReadingPanel>
+          <ReadingPanel>
+            <template v-slot:chinese_title>拓扑绝缘体Bi2Te3上MBE生长的超导体薄膜PdTe2</template>
+            <template
+              v-slot:english_title
+            >Molecular beam epitaxy of superconducting PdTe2 films on topological insulator Bi2Te3</template>
+            <template v-slot:content>
+              <p>在Bi2Te3上MBE生长的PdTe2倾向于形成薄膜，而不是向下层扩散</p>
+              <p>上层生长的PdTe2保持了bulk的面内晶格常数，而不是趋向于底层Bi2Te3，说明范德瓦尔斯间隙有效隔绝了应力</p>
+              <p>但是，PdTe2的面法线方向的晶格常数出现了随机波动，文章认为原因有衬底的flatness或者PdTe2的螺旋位错、晶界等缺陷</p>
+              <p>PdTe2的生长模式是螺旋形生长，常见于弱层间作用的范德瓦尔斯材料。范德瓦尔斯间隙保证了层间的原子级锋利。Bi2Te3发现缺陷很少。</p>
+            </template>
+          </ReadingPanel>
         </v-expansion-panels>
       </v-col>
     </v-row>
@@ -68,7 +80,7 @@ export default {
   data() {
     return {
       title: "4月读书笔记",
-      lastUpdate: "2020-04-14"
+      lastUpdate: "2020-04-17"
     };
   },
   head() {
