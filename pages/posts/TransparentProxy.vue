@@ -12,7 +12,7 @@
         然后是安装ssh server，
         <kbd>pkg install openssh</kbd>。运行
         <kbd>sshd</kbd>，中止
-        <kbd>pkill sshd</kbd>
+        <kbd>pkill sshd</kbd>，默认的端口不是22，是8022。
       </p>
       <p>
         接着准备编译，
