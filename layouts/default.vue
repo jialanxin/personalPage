@@ -28,7 +28,7 @@
     <v-content>
       <nuxt />
     </v-content>
-    <v-footer :fixed="fixed" app>
+    <v-footer absolute app>
       <span>
         &copy; 2019-2020 Open sources and contact me on <v-btn x-small dark href="https://github.com/jialanxin/personalPage/issues"><v-icon>mdi-github</v-icon> issue</v-btn>.
       </span>
