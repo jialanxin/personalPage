@@ -17,12 +17,9 @@
 
       <v-toolbar-title v-text="title" />
       <v-spacer />
-      
+
       <v-btn icon href="/feed.xml">
         <v-icon>mdi-rss</v-icon>
-      </v-btn>
-      <v-btn icon to="/">
-        <v-icon>mdi-home</v-icon>
       </v-btn>
     </v-app-bar>
     <v-content>
@@ -30,7 +27,10 @@
     </v-content>
     <v-footer absolute app>
       <span>
-        &copy; 2019-2020 Open sources and contact me on <v-btn x-small dark href="https://github.com/jialanxin/personalPage/issues"><v-icon>mdi-github</v-icon> issue</v-btn>.
+        &copy; 2019-2020 Open sources and contact me on
+        <v-btn x-small dark href="https://github.com/jialanxin/personalPage/issues">
+          <v-icon>mdi-github</v-icon>issue
+        </v-btn>.
       </span>
     </v-footer>
   </v-app>

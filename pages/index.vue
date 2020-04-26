@@ -20,7 +20,7 @@
       </v-row>
       <v-row>
         <v-col>
-          <v-pagination v-model="page" :length="numOfPages"></v-pagination>
+          <v-pagination v-model="page_blue" :length="numOfPages" @input="this.goToPageNum"></v-pagination>
         </v-col>
       </v-row>
     </v-container>
@@ -32,7 +32,8 @@ import json from "./posts.json";
 export default {
   data() {
     return {
-      page: 1,
+      page_blue: undefined,
+      page: undefined,
       posts: json
     };
   },
@@ -41,14 +42,38 @@ export default {
       title: "首页"
     };
   },
-  beforeRouteEnter(to, from, next) {
-    next(vm => {
-      for (let idx = 0; idx < vm.posts.length; idx++) {
-        if (vm.posts[idx].link === from.path) {
-          vm.page = Math.ceil((idx + 1) / 5);
-        }
+  created: function() {
+    if (this.$route.query.page == undefined) {
+      this.page = 1;
+      this.page_blue = this.page;
+    } else if (this.$route.query.page > this.numOfPages) {
+      this.page = this.numOfPages;
+      this.page_blue = this.page;
+    } else {
+      this.page = Number(this.$route.query.page);
+      this.page_blue = this.page;
+    }
+  },
+  methods: {
+    goToPageNum(num) {
+      if (num < 1) {
+        this.$router.push({ path: "", query: { page: "1" } });
+      } else if (num > this.numOfPages) {
+        this.$router.push({ path: "", query: { page: this.numOfPages } });
+      } else {
+        this.$router.push({ path: "", query: { page: num } });
       }
-    });
+    }
+  },
+  beforeRouteUpdate: function(to, from, next) {
+    if (to.query.page == undefined) {
+      this.page = 1;
+      this.page_blue = this.page;
+    } else {
+      this.page = Number(to.query.page);
+      this.page_blue = this.page;
+    }
+    next();
   },
   computed: {
     numOfPages: function() {
