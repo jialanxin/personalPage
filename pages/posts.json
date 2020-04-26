@@ -1,96 +1,80 @@
 [
   {
-    "id": 16,
-    "title": "手机建立透明代理",
-    "lastUpdate": "2020-04-22",
-    "link": "/posts/TransparentProxy"
+    "title": "添加分页",
+    "lastUpdate": "2020-04-26",
+    "link": "/posts/AddPagination"
   },
   {
-    "id": 15,
+    "title": "手机建立内网正向代理",
+    "lastUpdate": "2020-04-24",
+    "link": "/posts/LANProxy"
+  },
+  {
     "title": "人类观察",
     "lastUpdate": "2020-04-15",
     "link": "/posts/Thought2"
   },
   {
-    "id": 14,
     "title": "创建一个aur包",
     "lastUpdate": "2020-04-13",
     "link": "/posts/CreateAurPkg"
   },
   {
-    "id": 13,
     "title": "人是虫，思想是草",
     "lastUpdate": "2020-04-12",
     "link": "/posts/Thought1"
   },
   {
-    "id": 12,
     "title": "创建Rss订阅",
     "lastUpdate": "2020-04-08",
     "link": "/posts/RssFeed"
   },
   {
-    "id": 11,
     "title": "用Github actions发布博客之踩坑",
     "lastUpdate": "2020-04-07",
     "link": "/posts/UseGithubActions"
   },
   {
-    "id": 10,
     "title": "Git速查表",
     "lastUpdate": "2020-04-07",
     "link": "/posts/GitCheatSheet"
   },
   {
-    "id": 9,
     "title": "Procedure of dry transfer",
     "lastUpdate": "2020-03-10",
     "link": "/posts/ProcedureOfDryTransfer"
   },
   {
-    "id": 8,
     "title": "如何制作PDMS",
     "lastUpdate": "2020-03-10",
     "link": "/posts/PreparePDMS"
   },
   {
-    "id": 7,
-    "title": "添加分页",
-    "lastUpdate": "2020-03-07",
-    "link": "/posts/AddPagination"
-  },
-  {
-    "id": 6,
     "title": "为Caddy2设置HTTPS",
     "lastUpdate": "2020-03-06",
     "link": "/posts/Caddy2HTTPS"
   },
   {
-    "id": 5,
     "title": "记录-广州签证之行",
     "lastUpdate": "2020-03-05",
     "link": "/posts/VisaGuangzhou"
   },
   {
-    "id": 4,
     "title": "安装ArchWSL",
     "lastUpdate": "2020-03-02",
     "link": "/posts/InstallArchWSL"
   },
   {
-    "id": 3,
     "title": "Docker-compose部署aria2和filebrowser",
     "lastUpdate": "2019-12-23",
     "link": "/posts/Aria2Filebrowser"
   },
   {
-    "id": 2,
     "title": "Docker-compose部署静态页面",
     "lastUpdate": "2019-12-03",
     "link": "/posts/DockerDeploy"
   },
   {
-    "id": 1,
     "title": "用Nuxt编写一个个人页面",
     "lastUpdate": "2019-11-30",
     "link": "/posts/ToBuildNuxtBlog"

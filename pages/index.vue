@@ -9,7 +9,7 @@
       <v-row>
         <v-col>
           <v-list two-line>
-            <v-list-item v-for="post in shownPosts" :key="post.id" :to="post.link" nuxt>
+            <v-list-item v-for="(post,i) in shownPosts" :key="i" :to="post.link" nuxt>
               <v-list-item-content>
                 <v-list-item-title v-text="post.title"></v-list-item-title>
                 <v-list-item-subtitle v-text="post.lastUpdate"></v-list-item-subtitle>
@@ -28,7 +28,7 @@
 </template>
 
 <script>
-import json from "./posts.json"
+import json from "./posts.json";
 export default {
   data() {
     return {
@@ -41,6 +41,15 @@ export default {
       title: "首页"
     };
   },
+  beforeRouteEnter(to, from, next) {
+    next(vm => {
+      for (let idx = 0; idx < vm.posts.length; idx++) {
+        if (vm.posts[idx].link === from.path) {
+          vm.page = Math.ceil((idx + 1) / 5);
+        }
+      }
+    });
+  },
   computed: {
     numOfPages: function() {
       return Math.ceil(this.posts.length / 5);
@@ -48,8 +57,8 @@ export default {
     shownPosts: function() {
       var beginIndex = (this.page - 1) * 5;
       var endIndex = this.page * 5;
-      if (endIndex > this.page.length - 1) {
-        endIndex = this.page.length;
+      if (endIndex > this.posts.length - 1) {
+        endIndex = this.posts.length;
       }
       return this.posts.slice(beginIndex, endIndex);
     }

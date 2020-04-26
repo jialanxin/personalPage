@@ -2,6 +2,7 @@
   <posttemplate :posttitle="title">
     <template v-slot:content>
       <p>iPad上的代理软件不想用了，所以想在上游搭建一个透明代理，没法直接搞路由器，用树莓派也麻烦，后来想一想手机反正一直开机，可以把代理放在上面。</p>
+      <p>后来我发现我搞错了，所谓透明代理是要将网关放在路由器或者其他设备上，以实现内网所有指定该网关为默认网关的设备所有流量均走代理分流，不在乎本地是否实现了代理。而我只是把ipad上的正向代理服务器放到其他设备上去了，并不是真正地透明代理。实际操作中还发现，iOS系统的wifi代理设置可以代理绝大部分应用，而安卓系统代理只支持浏览器，而且绝大部分应用既不走系统也不支持单独设置代理，还是要用VPN软件。</p>
       <p>
         首先是在手机上下一个termux终端模拟器。
         <kbd>passwd</kbd>设置密码，
@@ -28,8 +29,7 @@
     </template>
   </posttemplate>
 </template>
-  </posttemplate>
-</template>
+
 
 <script>
 import posttemplate from "../../components/posttemplate";
@@ -37,7 +37,7 @@ export default {
   components: { posttemplate },
   data() {
     return {
-      title: "手机建立透明代理"
+      title: "手机建立内网正向代理"
     };
   },
 
