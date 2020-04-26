@@ -60,7 +60,8 @@ export default {
             title: post.title,
             id: post.id,
             link: `https://lxj230.xyz${post.link}`,
-            description: post.lastUpdate
+            description: post.lastUpdate,
+            date: new Date(post.lastUpdate+"T00:00:00+08:00")
           })
         })
       },
