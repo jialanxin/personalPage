@@ -9,9 +9,31 @@
             </template>
 
             <v-card>
-              <v-carousel show-arrows-on-hover hide-delimiter-background height="auto">
-                <v-carousel-item v-for="(img,i) in moment.imgs" :src="img.src" :key="i" contain></v-carousel-item>
-              </v-carousel>
+              <v-container v-if="moment.hasOwnProperty('imgs')">
+                <v-row justify="center">
+                  <v-col v-for="(img,idx) in moment.imgs" :key="idx" cols="4">
+                    <v-img :src="img.src" aspect-ratio="1" @click="clickOnImg(moment,img)"></v-img>
+                  </v-col>
+                  <v-overlay :value="overlayOn">
+                    <v-row>
+                      <v-col>
+                        <v-carousel hide-delimiter-background v-model="idxOnOverlay" height="auto">
+                          <v-carousel-item v-for="(src,ix) in shownOnOverlay" :key="ix">
+                            <v-img :src="src" contain :max-width="imgWidth" :max-height="imgHeight"></v-img>
+                          </v-carousel-item>
+                        </v-carousel>
+                      </v-col>
+                    </v-row>
+                    <v-row>
+                      <v-col class="text-center">
+                        <v-btn icon @click="overlayOn = false">
+                          <v-icon>mdi-close</v-icon>
+                        </v-btn>
+                      </v-col>
+                    </v-row>
+                  </v-overlay>
+                </v-row>
+              </v-container>
               <v-card-text v-if="moment.hasOwnProperty('text')">{{moment.text}}</v-card-text>
               <v-card-text v-else v-html="moment.html"></v-card-text>
             </v-card>
@@ -28,7 +50,8 @@ export default {
     return {
       moments: [
         {
-          text: "要给Overleaf使用Git真就要会员，8刀一月不含税真的贵，而且它的默认仓库必须用git clone，设置为远程库结果和本地没有共同祖先，没法merge，没办法必须要覆写本地才能把历史给它接上。",
+          text:
+            "要给Overleaf使用Git真就要会员，8刀一月不含税真的贵，而且它的默认仓库必须用git clone，设置为远程库结果和本地没有共同祖先，没法merge，没办法必须要覆写本地才能把历史给它接上。",
           icon: "5/07"
         },
         {
@@ -64,10 +87,27 @@ export default {
           text: "打过了零灯杀生院，手机电池杀手",
           icon: "3/19"
         }
-      ]
+      ],
+      overlayOn: false,
+      shownOnOverlay: [],
+      idxOnOverlay: 0
     };
   },
-
+  methods: {
+    clickOnImg: function(moment, img) {
+      this.overlayOn = true;
+      this.shownOnOverlay = moment.imgs.map(img => img.src);
+      this.idxOnOverlay = this.shownOnOverlay.indexOf(img.src);
+    }
+  },
+  computed: {
+    imgWidth: function() {
+      return window.innerWidth;
+    },
+    imgHeight: function() {
+      return window.innerHeight;
+    }
+  },
   head() {
     return {
       title: "个人动态"
