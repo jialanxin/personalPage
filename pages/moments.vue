@@ -105,7 +105,7 @@ export default {
       return window.innerWidth;
     },
     imgHeight: function() {
-      return window.innerHeight;
+      return window.innerHeight-50;
     }
   },
   head() {
