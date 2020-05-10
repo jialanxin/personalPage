@@ -7,12 +7,12 @@
     </v-row>
     <v-row>
       <v-col>
-        <p class="font-weight-light">latest update: {{lastUpdate}}</p>
+        <v-btn @click="expandOrHide">Expand All/None</v-btn>
       </v-col>
     </v-row>
     <v-row>
       <v-col>
-        <v-expansion-panels multiple>
+        <v-expansion-panels multiple v-model="expanded">
           <ReadingPanel>
             <template v-slot:chinese_title>激光可调的外延生长的MoS2和Bi2Se3异质结</template>
             <template
@@ -60,6 +60,7 @@
             <template
               v-slot:english_title
             >Molecular beam epitaxy of superconducting PdTe2 films on topological insulator Bi2Te3</template>
+            <template v-slot:author>Xue 2019</template>
             <template v-slot:content>
               <p>在Bi2Te3上MBE生长的PdTe2倾向于形成薄膜，而不是向下层扩散</p>
               <p>上层生长的PdTe2保持了bulk的面内晶格常数，而不是趋向于底层Bi2Te3，说明范德瓦尔斯间隙有效隔绝了应力</p>
@@ -80,8 +81,21 @@ export default {
   data() {
     return {
       title: "4月读书笔记",
-      lastUpdate: "2020-04-17"
+      expanded: [],
+      expand: false,
+      numOfArticles: 3
     };
+  },
+  methods: {
+    expandOrHide: function() {
+      if (this.expand === false) {
+        this.expanded = [...Array(this.numOfArticles).keys()];
+        this.expand = true;
+      } else {
+        this.expanded = [];
+        this.expand = false;
+      }
+    }
   },
   head() {
     return { title: this.title };

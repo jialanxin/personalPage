@@ -27,25 +27,25 @@ jobs:
       with: 
         name: dist
         path: dist/ 
-  docker:
-    needs: nuxt
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2
-    - uses: actions/download-artifact@v1
-      with:
-        name: dist
-    - name: download caddy
-      run: |
-        curl -L -o caddy2.tar.gz https://github.com/caddyserver/caddy/releases/download/v2.0.0/caddy_2.0.0_linux_amd64.tar.gz
-        tar xf caddy2.tar.gz
-    - name: build Docker
-      run: docker build . --file Dockerfile --tag personalpage
-    - name: publish docker
-      run: |
-        docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
-        docker tag personalpage ${{ secrets.DOCKER_USERNAME }}/personalpage
-        docker push ${{ secrets.DOCKER_USERNAME }}/personalpage
+  # docker:
+  #   needs: nuxt
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #   - uses: actions/checkout@v2
+  #   - uses: actions/download-artifact@v1
+  #     with:
+  #       name: dist
+  #   - name: download caddy
+  #     run: |
+  #       curl -L -o caddy2.tar.gz https://github.com/caddyserver/caddy/releases/download/v2.0.0/caddy_2.0.0_linux_amd64.tar.gz
+  #       tar xf caddy2.tar.gz
+  #   - name: build Docker
+  #     run: docker build . --file Dockerfile --tag personalpage
+  #   - name: publish docker
+  #     run: |
+  #       docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
+  #       docker tag personalpage ${{ secrets.DOCKER_USERNAME }}/personalpage
+  #       docker push ${{ secrets.DOCKER_USERNAME }}/personalpage
 
 
     
