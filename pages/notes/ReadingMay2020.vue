@@ -37,6 +37,23 @@
               <p>HX1的信号的时间常数是19fs和1.3ps，与X-A、1S信号差不多，可以共同归结于电子和空穴捕获(trapping)。</p>
             </template>
           </ReadingPanel>
+          <ReadingPanel>
+            <template v-slot:chinese_title>强光学激发下单层MoSe2中三激子的非线性动力学</template>
+            <template
+              v-slot:english_title
+            >Nonlinear dynamics of trions under strong optical excitation in monolayer MoSe2</template>
+            <template v-slot:author>Ye 2018</template>
+            <template v-slot:content>
+              <p class="font-bold">节选：</p>
+              <p>pump能量从1.69eV到1.645eV，覆盖在MoSe2的激子1.653eV上，probe选在三激子（1.622eV）处。不同的pump能量的瞬时反射率对比度（Contrast）有正负不同。在1ps左右还有一个趋势反转。整体用一个triexponential去拟合，A1、A2为正，A3为负。正成分的时间常数为2.0±0.3ps和450±24ps，且不随pump能量变化。但A1/A2在接近共振能量时变大。A3在接近共振时最负。</p>
+              <p>把pump设定在1.69eV，高于A激子，低于B激子，probe在激子处，biexponential，两个时间常数分别为6.2ps和67ps，快的是辐射复合和声子散射，慢的是缺陷俘获的非辐射复合</p>
+              <p>pump在1.69，probe在三激子处，A3归零，也是biexponential，时间常数2.2ps和450ps</p>
+              <p>当非共振激发1.69eV时，瞬时对比度图中的激子和三激子的峰都正常，与PL一致</p>
+              <p>2.2ps的时间常数和三激子的形成时间相近，三激子的形成减弱了形成激子的跃迁的态占据，450ps是三激子population的减少。所以当pump接近激子能量时，短成分（A1/A2）变多。</p>
+              <p>pump在1.65eV的激子处，probe在1.62eV的三激子处，</p>
+
+            </template>
+          </ReadingPanel>
         </v-expansion-panels>
       </v-col>
     </v-row>
