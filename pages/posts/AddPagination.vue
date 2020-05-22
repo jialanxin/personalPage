@@ -16,6 +16,7 @@
       <p>
         后来在使用的过程中发现，从文章页后退到目录页的时候总是会回到默认的第一页，而不是进入的那一页。对此的修正需要用到vue-router的导航守卫，使用组件内守卫
         <a
+          target="_blank"
           href="https://router.vuejs.org/zh/guide/advanced/navigation-guards.html#%E7%BB%84%E4%BB%B6%E5%86%85%E7%9A%84%E5%AE%88%E5%8D%AB"
         >beforeRouteEnter</a> ，该守卫在进入组件之前可以从
         <code>from.path</code>属性可以得到之前的路径，在回调函数

@@ -50,8 +50,7 @@ export default {
     return {
       moments: [
         {
-          text:
-            "🕯️",
+          text: "🕯️",
           icon: "5/13"
         },
         {
@@ -67,7 +66,7 @@ export default {
         {
           imgs: [{ src: "/img/Moments/2020-04-25/carbon.svg" }],
           html:
-            '今天在车上把服务器上的ubuntu升级到了20.04，做法参照<a href="https://soulteary.com/2020/04/25/server-upgrade-ubuntu-20-04-lts.html">《服务端升级 Ubuntu 20.04 LTS 记录》</a>，就是不知道升级之后默认的ssh端口号也会换。。。',
+            '今天在车上把服务器上的ubuntu升级到了20.04，做法参照<a target="_blank" href="https://soulteary.com/2020/04/25/server-upgrade-ubuntu-20-04-lts.html">《服务端升级 Ubuntu 20.04 LTS 记录》</a>，就是不知道升级之后默认的ssh端口号也会换。。。',
           icon: "4/25"
         },
         {
@@ -110,7 +109,7 @@ export default {
       return window.innerWidth;
     },
     imgHeight: function() {
-      return window.innerHeight-50;
+      return window.innerHeight - 50;
     }
   },
   head() {

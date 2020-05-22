@@ -70,7 +70,7 @@ export default {
       title: "5月读书笔记",
       expanded: [],
       expand: false,
-      numOfArticles: 1
+      numOfArticles: 2
     };
   },
   methods: {
