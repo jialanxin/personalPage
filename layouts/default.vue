@@ -22,9 +22,9 @@
         <v-icon>mdi-rss</v-icon>
       </v-btn>
     </v-app-bar>
-    <v-content>
+    <v-main>
       <nuxt />
-    </v-content>
+    </v-main>
     <v-footer absolute app>
       <span>
         &copy; 2019-2020 Open sources and contact me on
