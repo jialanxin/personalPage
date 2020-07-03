@@ -33,6 +33,11 @@
               <p>外尔半金属作为二维陈绝缘体的堆叠，每一层陈绝缘体都有边缘态的霍尔电导。烧绿石结构的晶体，在用非轴向微小应力破坏了对称性之后可以探测到反常霍尔效应（无外加磁场的横向电导）。</p>
               <p>手征磁效应和反常霍尔效应都可以放到一个轴子的电动力学的框架下去理解。</p>
               <p>施加一个磁场，电子将在费米弧上滑动，并穿越外尔点到达另一个表面态，这个轨迹称为外尔轨道。</p>
+              <p>
+                ARPES很适合用在2D材料上，但用在3D材料上要注意动量
+                <mathexpression tex="k_z" />对入射光子能量很敏感，但也是适合用的。
+              </p>
+              <p>TaAs族的外耳半金属中，增强的SOC将一对外尔点在动量空间上推得越来越远。费米弧之间的距离也同样变远了。</p>
             </template>
           </ReadingPanel>
           <ReadingPanel>
@@ -46,8 +51,14 @@
                 <a href="https://zhuanlan.zhihu.com/p/24110994" target="_blank">Berry phase（几何相位）</a>、
                 <a href="https://zhuanlan.zhihu.com/p/24402528" target="_blank">贝利相位、联络与曲率</a>
               </p>
-              <p>贝里相位γ<sub>n</sub>是一个规范不变量，只能加上2π的整数倍。</p>
-              <p>与贝里矢势不同，贝里曲率<mathexpression tex="\Omega^n_{\mu\nu}(\bold{R})"></mathexpression>是一个规范不变量，并且是可观测量，可以被认为是参数空间中的磁场。</p>
+              <p>
+                贝里相位γ
+                <sub>n</sub>是一个规范不变量，只能加上2π的整数倍。
+              </p>
+              <p>
+                与贝里矢势不同，贝里曲率
+                <mathexpression tex="\Omega^n_{\mu\nu}(\bold{R})"></mathexpression>是一个规范不变量，并且是可观测量，可以被认为是参数空间中的磁场。
+              </p>
               <p>态矢量的简并会导致贝里曲率形成参数空间中的单极子。</p>
               <p>贝里曲率在一个闭流形上的积分除以2π等于其中的单极子数目，称为陈数。</p>
               <p>关于贝里曲率对布罗赫电子运动的影响，在具有时间反演对称性和空间反演对称性的晶体中，在一个布里渊区内，贝里曲率的的影响相互抵消。</p>
@@ -62,9 +73,9 @@
 
 <script>
 import ReadingPanel from "../../components/ReadingPanel.vue";
-import mathexpression from "../../components/mathexpression.vue"
+import mathexpression from "../../components/mathexpression.vue";
 export default {
-  components: { ReadingPanel,mathexpression },
+  components: { ReadingPanel, mathexpression },
   data() {
     return {
       title: "6月读书笔记",
@@ -82,12 +93,6 @@ export default {
         this.expanded = [];
         this.expand = false;
       }
-    }
-  },
-  computed:{
-    berry_curvration:function(){
-      let html = katex.renderToString("\\Omega^n_{\\mu}")
-      return html
     }
   },
   head() {

@@ -27,6 +27,11 @@ export default {
     return {
       posts: [
         {
+          id: 5,
+          title: "7月读书笔记",
+          link: "/notes/ReadingJul2020"
+        },
+        {
           id: 4,
           title: "6月读书笔记",
           link: "/notes/ReadingJun2020"
