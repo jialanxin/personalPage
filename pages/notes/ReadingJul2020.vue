@@ -24,6 +24,22 @@
               <p>MoTe2的费米弧连接方式对应力很敏感。</p>
             </template>
           </ReadingPanel>
+          <ReadingPanel>
+            <template v-slot:chinese_title>拓扑半金属中外尔费米子手性的直接光学探测</template>
+            <template
+              v-slot:english_title
+            >Direct optical detection of Weyl fermion chirality in a topological semimetal</template>
+            <template v-slot:author>Ma 2017</template>
+            <template v-slot:content>
+              <p>外尔半金属的中红外激发，光电流探测————圆偏振光伏效应。</p>
+              <p>有两个限制因素，其一是手性选择定则，对于沿+z方向传播的右旋偏振光，对于+1的外尔点，仅有<mathexpression tex="+k_z" />一侧的跃迁是允许的，<mathexpression tex="-k_z" />一侧的是不允许的，原因是角动量守恒。</p>
+              <p>第二个是泡利不相容，当化学势远离外尔点，并且外尔锥出现倾斜的时候，有一侧的导带可能已经被占据了，因而无法跃迁。</p>
+              <p>当光从a轴直入射，b轴方向存在电流，在右旋时正向最大，左旋时反向最大，线偏振光时为零，c轴方向电流始终为零。</p>
+              <p>将入射点调整得更加靠近一个电极，发现b方向和c方向都出现了电流强度的偏置。被归因为光热效应引发的温度梯度。</p>
+              <p>因为TaAs中的化学势靠经W2点，W2点的光电流贡献可以忽略，由相关方程给出。</p>
+              <p>本实验验证了W1点的+1手性。</p>
+            </template>
+          </ReadingPanel>
         </v-expansion-panels>
       </v-col>
     </v-row>
@@ -40,7 +56,7 @@ export default {
       title: "7月读书笔记",
       expanded: [],
       expand: false,
-      numOfArticles: 1
+      numOfArticles: 2
     };
   },
   methods: {
