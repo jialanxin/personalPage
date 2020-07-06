@@ -40,6 +40,23 @@
               <p>本实验验证了W1点的+1手性。</p>
             </template>
           </ReadingPanel>
+          <ReadingPanel>
+            <template v-slot:chinese_title>外尔半金属中朗道能级对声子色散的影响</template>
+            <template v-slot:english_title>Influence of Landau levels on the phonon dispersion of Weyl semimetals</template>
+            <template v-slot:author>Rinkel 2019</template>
+            <template v-slot:content></template>
+          </ReadingPanel>
+          <ReadingPanel>
+            <template v-slot:chinese_title>从氟化石墨烯到羟基石墨烯转变中的可调控光致发光和谱劈裂</template>
+            <template v-slot:english_title>Tunable photoluminescence and spectrum split from fluorinated to hydroxylated graphene</template>
+            <template v-slot:author>Gong 2014</template>
+            <template v-slot:content>
+              <p>少层的氟化石墨烯通过液体法剥离。随后用碱溶液羟基化，溶液从不溶变溶解</p>
+              <p>傅里叶变换红外光谱（FTIRFTIR），表征随着碱的比例增大，羟基化程度变高。 </p>
+              <p>XRD中(001)峰变低，(002)峰变高。</p>
+              <p>XPS中F的1s峰和俄歇电子带消失。O的1s和俄歇电子出现。</p>
+            </template>
+          </ReadingPanel>
         </v-expansion-panels>
       </v-col>
     </v-row>
@@ -56,7 +73,7 @@ export default {
       title: "7月读书笔记",
       expanded: [],
       expand: false,
-      numOfArticles: 2
+      numOfArticles: 4
     };
   },
   methods: {
