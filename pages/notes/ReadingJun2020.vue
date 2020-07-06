@@ -38,6 +38,7 @@
                 <mathexpression tex="k_z" />对入射光子能量很敏感，但也是适合用的。
               </p>
               <p>TaAs族的外耳半金属中，增强的SOC将一对外尔点在动量空间上推得越来越远。费米弧之间的距离也同样变远了。</p>
+              <p>其他实验探测手段：STM，光探测，量子振荡，手征反常（磁阻）等。</p>
             </template>
           </ReadingPanel>
           <ReadingPanel>
