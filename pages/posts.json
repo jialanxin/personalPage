@@ -1,4 +1,9 @@
-[ 
+[
+  {
+    "title": "从BIOS开始的Manjaro双系统安装指南",
+    "lastUpdate": "2020-08-15",
+    "link": "/posts/DualBootManjaro"
+  },
   {
     "title": "CiteNet——文献引用网络分析工具",
     "lastUpdate": "2020-06-12",
