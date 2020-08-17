@@ -122,7 +122,7 @@ export default {
           name: "中银瑞利混合C",
           index: "002414",
           unitValue: 1.145,
-          quantity: 0,
+          quantity: 19.13,
           percent: 5.96,
           difference: undefined,
         },
