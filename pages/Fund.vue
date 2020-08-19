@@ -50,7 +50,7 @@ export default {
           name: "交银双轮动A/B",
           index: "519723",
           unitValue: 1.0602,
-          quantity: 55.31,
+          quantity: 68.06,
           percent: 17.27,
           difference: undefined,
         },
