@@ -106,7 +106,7 @@ export default {
           name: "中银润利混合C",
           index: "003967",
           unitValue: 1.0707,
-          quantity: 0,
+          quantity: 28.78,
           percent: 5.98,
           difference: undefined,
         },
