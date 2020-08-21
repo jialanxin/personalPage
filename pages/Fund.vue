@@ -114,7 +114,7 @@ export default {
           name: "中银宏利混合C",
           index: "002435",
           unitValue: 1.078,
-          quantity: 0,
+          quantity: 18.50,
           percent: 5.98,
           difference: undefined,
         },
