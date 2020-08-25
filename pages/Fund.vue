@@ -42,7 +42,7 @@ export default {
           name: "交银信用添利债券(LOF)",
           index: "164902",
           unitValue: 1.1639,
-          quantity: 80.86,
+          quantity: 103.18,
           percent: 18.74,
           difference: undefined,
         },
