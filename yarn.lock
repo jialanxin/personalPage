@@ -7593,9 +7593,9 @@ vue-client-only@^2.0.0:
   integrity sha512-arhk1wtWAfLsJyxGMoEYhoBowM87/i6HLSG2LH/03Yog6i2d9JEN1peMP0Ceis+/n9DxdenGYZZTxbPPJyHciA==
 
 vue-code-highlight@^0.7.4:
-  version "0.7.4"
-  resolved "https://registry.yarnpkg.com/vue-code-highlight/-/vue-code-highlight-0.7.4.tgz#ab7f54960978baca8fdb074a88502a06a9126a55"
-  integrity sha512-TmJ/WPXQnNCIugHkAwMiS3//6BM0UIiUQRyLpoRJ2g6f+coIcoyAXLeGwqP9f1lfFHjlzCRSfmX+4tus4eKhgQ==
+  version "0.7.5"
+  resolved "https://registry.yarnpkg.com/vue-code-highlight/-/vue-code-highlight-0.7.5.tgz#3eadbcd39c22f6389e68e24d574a01d107936db1"
+  integrity sha512-y1/3xVz2diArv51eoQT3JCb8M2N4htMtgEtG0GAPABlXJkhdkJi4aSTfi0RYFNxqj5b+P73PBAmBcth/2NV0ng==
   dependencies:
     prism-es6 "^1.2.0"
     vue "^2.5.16"
@@ -7668,12 +7668,7 @@ vue-template-es2015-compiler@^1.9.0:
   resolved "https://registry.yarnpkg.com/vue-template-es2015-compiler/-/vue-template-es2015-compiler-1.9.1.tgz#1ee3bc9a16ecbf5118be334bb15f9c46f82f5825"
   integrity sha512-4gDntzrifFnCEvyoO8PqyJDmguXgVPxKiIxrBKjIowvL9l+N66196+72XVYR8BBf1Uv1Fgt3bGevJ+sEmxfZzw==
 
-vue@^2.5.16:
-  version "2.6.11"
-  resolved "https://registry.yarnpkg.com/vue/-/vue-2.6.11.tgz#76594d877d4b12234406e84e35275c6d514125c5"
-  integrity sha512-VfPwgcGABbGAue9+sfrD4PuwFar7gPb1yl1UK1MwXoQPAw0BKSqWfoYCT/ThFrdEVWoI51dBuyCoiNU9bZDZxQ==
-
-vue@^2.6.11:
+vue@^2.5.16, vue@^2.6.11:
   version "2.6.12"
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.6.12.tgz#f5ebd4fa6bd2869403e29a896aed4904456c9123"
   integrity sha512-uhmLFETqPPNyuLLbsKz6ioJ4q7AZHzD8ZVFNATNyICSZouqP2Sz0rotWQC8UNBF6VGSCs5abnKJoStA6JbCbfg==
