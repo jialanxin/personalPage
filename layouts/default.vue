@@ -47,26 +47,31 @@ export default {
         {
           icon: "mdi-apps",
           title: "Home",
-          to: "/"
+          to: "/",
         },
         {
           icon: "mdi-book-open-variant",
           title: "Reading Notes",
-          to: "/notes"
+          to: "/notes",
         },
         {
           icon: "mdi-timeline-text",
           title: "Moments",
-          to: "/moments"
+          to: "/moments",
         },
         {
           icon: "mdi-chart-bubble",
           title: "Tools",
-          to: "/Tools"
-        }
+          to: "/Tools",
+        },
+        {
+          icon: "mdi-currency-usd",
+          title: "Fund",
+          to: "/Fund",
+        },
       ],
-      title: "My Personal Page"
+      title: "My Personal Page",
     };
-  }
+  },
 };
 </script>
