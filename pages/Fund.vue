@@ -82,7 +82,7 @@ export default {
           name: "交银新回报灵活配置混合A",
           index: "519752",
           unitValue: 1.363,
-          quantity: 36.71,
+          quantity: 43.98,
           percent: 6.53,
           difference: undefined,
         },
