@@ -43,7 +43,7 @@ export default {
           index: "164902",
           unitValue: 1.1639,
           quantity: 145.94,
-          percent: 18.74,
+          percent: 18.76,
           difference: undefined,
         },
         {
@@ -51,7 +51,7 @@ export default {
           index: "519723",
           unitValue: 1.0602,
           quantity: 150.45,
-          percent: 17.27,
+          percent: 17.38,
           difference: undefined,
         },
         {
@@ -59,7 +59,7 @@ export default {
           index: "006793",
           unitValue: 1.0398,
           quantity: 64.51,
-          percent: 6.78,
+          percent: 6.84,
           difference: undefined,
         },
         {
@@ -67,7 +67,7 @@ export default {
           index: "519755",
           unitValue: 1.397,
           quantity: 50.01,
-          percent: 7.24,
+          percent: 7.15,
           difference: undefined,
         },
         {
@@ -75,7 +75,7 @@ export default {
           index: "519738",
           unitValue: 1.252,
           quantity: 56.29,
-          percent: 7.24,
+          percent: 7.11,
           difference: undefined,
         },
         {
@@ -83,7 +83,7 @@ export default {
           index: "519752",
           unitValue: 1.363,
           quantity: 43.98,
-          percent: 6.53,
+          percent: 6.42,
           difference: undefined,
         },
         {
@@ -91,7 +91,7 @@ export default {
           index: "002503",
           unitValue: 1.076,
           quantity: 63.09,
-          percent: 6.03,
+          percent: 6.00,
           difference: undefined,
         },
         {
@@ -99,7 +99,7 @@ export default {
           index: "002058",
           unitValue: 1.077,
           quantity: 46.3,
-          percent: 6.02,
+          percent: 6.00,
           difference: undefined,
         },
         {
@@ -107,7 +107,7 @@ export default {
           index: "003967",
           unitValue: 1.0707,
           quantity: 55.56,
-          percent: 5.98,
+          percent: 6.00,
           difference: undefined,
         },
         {
@@ -115,7 +115,7 @@ export default {
           index: "002435",
           unitValue: 1.078,
           quantity: 61.16,
-          percent: 5.98,
+          percent: 6.00,
           difference: undefined,
         },
         {
@@ -123,7 +123,7 @@ export default {
           index: "002414",
           unitValue: 1.145,
           quantity: 57.59,
-          percent: 5.96,
+          percent: 6.00,
           difference: undefined,
         },
         {
@@ -131,7 +131,7 @@ export default {
           index: "519772",
           unitValue: 2.933,
           quantity: 17.47,
-          percent: 3.95,
+          percent: 3.98,
           difference: undefined,
         },
         {
@@ -139,7 +139,7 @@ export default {
           index: "519773",
           unitValue: 1.951,
           quantity: 13.15,
-          percent: 2.28,
+          percent: 2.36,
           difference: undefined,
         },
       ],
