@@ -98,7 +98,7 @@ export default {
           name: "中银新机遇混合C",
           index: "002058",
           unitValue: 1.077,
-          quantity: 46.3,
+          quantity: 62.95,
           percent: 6.00,
           difference: undefined,
         },
