@@ -16,12 +16,15 @@ export default {
       this.funds[idx].unitValue = resData[idx].netWorth;
     }
     const totalValue = this.funds
-      .map((fund) => fund.unitValue * fund.quantity)
+      .map(
+        (fund) => fund.unitValue * (fund.alipayQuantity + fund.wechatQuantity)
+      )
       .reduce((sum, value) => sum + value);
     this.funds.forEach((fund) => {
-      fund.value = (fund.unitValue * fund.quantity).toFixed(2);
+      fund.alipayValue = (fund.unitValue * fund.alipayQuantity).toFixed(2);
+      fund.wechatValue = (fund.unitValue * fund.wechatQuantity).toFixed(2);
       fund.difference = (
-        fund.unitValue * fund.quantity -
+        fund.unitValue * (fund.alipayQuantity + fund.wechatQuantity) -
         (totalValue * fund.percent) / 100
       ).toFixed(2);
     });
@@ -32,8 +35,10 @@ export default {
         { text: "名称", value: "name" },
         { text: "代码", value: "index" },
         { text: "净值", value: "unitValue" },
-        { text: "份额", value: "quantity" },
-        { text: "价值", value: "value" },
+        { text: "支付宝份额", value: "alipayQuantity" },
+        { text: "支付宝价值", value: "alipayValue" },
+        { text: "微信份额", value: "wechatQuantity" },
+        { text: "微信价值", value: "wechatValue" },
         { text: "比重", value: "percent" },
         { text: "差额", value: "difference" },
       ],
@@ -42,105 +47,105 @@ export default {
           name: "交银信用添利债券(LOF)",
           index: "164902",
           unitValue: 1.1639,
-          quantity: 176.86,
+          alipayQuantity: 176.86,
+          wechatQuantity: 0,
           percent: 18.76,
-          difference: undefined,
         },
         {
           name: "交银双轮动A/B",
           index: "519723",
           unitValue: 1.0602,
-          quantity: 167.42+11.32,
+          alipayQuantity: 167.42,
+          wechatQuantity: 11.32,
           percent: 17.38,
-          difference: undefined,
         },
         {
           name: "交银稳鑫短债债券A",
           index: "006793",
           unitValue: 1.0398,
-          quantity: 64.51+15.36,
+          alipayQuantity: 64.51,
+          wechatQuantity: 15.36,
           percent: 6.84,
-          difference: undefined,
         },
         {
           name: "交银多策略回报灵活配置混合A",
           index: "519755",
           unitValue: 1.397,
-          quantity: 50.01+2.12,
+          alipayQuantity: 50.01,
+          wechatQuantity: 2.12,
           percent: 7.15,
-          difference: undefined,
         },
         {
           name: "交银周期回报灵活配置混合A",
           index: "519738",
           unitValue: 1.252,
-          quantity: 64.18,
+          alipayQuantity: 64.18,
+          wechatQuantity: 0,
           percent: 7.11,
-          difference: undefined,
         },
         {
           name: "交银新回报灵活配置混合A",
           index: "519752",
           unitValue: 1.363,
-          quantity: 43.98+7.23,
+          alipayQuantity: 43.98,
+          wechatQuantity: 7.23,
           percent: 6.42,
-          difference: undefined,
         },
         {
           name: "中银腾利混合C",
           index: "002503",
           unitValue: 1.076,
-          quantity: 63.09,
-          percent: 6.00,
-          difference: undefined,
+          alipayQuantity: 63.09,
+          wechatQuantity: 0,
+          percent: 6.0,
         },
         {
           name: "中银新机遇混合C",
           index: "002058",
           unitValue: 1.077,
-          quantity: 62.95,
-          percent: 6.00,
-          difference: undefined,
+          alipayQuantity: 62.95,
+          wechatQuantity: 0,
+          percent: 6.0,
         },
         {
           name: "中银润利混合C",
           index: "003967",
           unitValue: 1.0707,
-          quantity: 72.24,
-          percent: 6.00,
-          difference: undefined,
+          alipayQuantity: 72.24,
+          wechatQuantity: 0,
+          percent: 6.0,
         },
         {
           name: "中银宏利混合C",
           index: "002435",
           unitValue: 1.078,
-          quantity: 61.16,
-          percent: 6.00,
-          difference: undefined,
+          alipayQuantity: 61.16,
+          wechatQuantity: 0,
+          percent: 6.0,
         },
         {
           name: "中银瑞利混合C",
           index: "002414",
           unitValue: 1.145,
-          quantity: 57.59,
-          percent: 6.00,
-          difference: undefined,
+          alipayQuantity: 57.59,
+          wechatQuantity: 0,
+          percent: 6.0,
         },
         {
           name: "交银新生活力灵活配置混合",
           index: "519772",
           unitValue: 2.933,
-          quantity: 17.47,
+          alipayQuantity: 17.47,
+          wechatQuantity: 0,
           percent: 3.98,
-          difference: undefined,
         },
         {
           name: "交银数据产业灵活配置混合",
           index: "519773",
           unitValue: 1.951,
-          quantity: 13.15,
+          alipayQuantity: 13.15,
+          wechatQuantity: 0,
           percent: 2.36,
-          difference: undefined,
         },
       ],
     };
