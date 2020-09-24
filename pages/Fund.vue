@@ -127,7 +127,7 @@ export default {
           name: "中银瑞利混合C",
           index: "002414",
           unitValue: 1.145,
-          alipayQuantity: 57.59,
+          alipayQuantity: 73.23,
           wechatQuantity: 0,
           percent: 6.0,
         },
