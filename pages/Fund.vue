@@ -99,7 +99,7 @@ export default {
           name: "交银周期回报灵活配置混合A",
           index: "519738",
           unitValue: 1.252,
-          alipayQuantity: 87.69,
+          alipayQuantity: 95.43,
           wechatQuantity: 0,
           percent: 5.5,
         },
@@ -108,7 +108,7 @@ export default {
           index: "519752",
           unitValue: 1.363,
           alipayQuantity: 43.98,
-          wechatQuantity: 35.28,
+          wechatQuantity: 37.41,
           percent: 5.5,
         },
         {
@@ -116,7 +116,7 @@ export default {
           index: "519772",
           unitValue: 2.933,
           alipayQuantity: 24.06,
-          wechatQuantity: 1.91,
+          wechatQuantity: 2.87,
           percent: 4.04,
         },
         {
