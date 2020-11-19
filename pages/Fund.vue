@@ -60,7 +60,7 @@ export default {
           index: "519723",
           unitValue: 1.0602,
           alipayQuantity: 167.42,
-          wechatQuantity: 101.82,
+          wechatQuantity: 107.51,
           percent: 13.0,
         },
         {
@@ -92,7 +92,7 @@ export default {
           index: "519755",
           unitValue: 1.397,
           alipayQuantity: 50.01,
-          wechatQuantity: 49.9,
+          wechatQuantity: 52.06,
           percent: 6.5,
         },
         {
@@ -108,7 +108,7 @@ export default {
           index: "519752",
           unitValue: 1.363,
           alipayQuantity: 43.98,
-          wechatQuantity: 39.54,
+          wechatQuantity: 41.67,
           percent: 5.5,
         },
         {
@@ -116,7 +116,7 @@ export default {
           index: "519772",
           unitValue: 2.933,
           alipayQuantity: 24.06,
-          wechatQuantity: 3.84,
+          wechatQuantity: 4.82,
           percent: 4.04,
         },
         {
@@ -131,7 +131,7 @@ export default {
           name: "中银新机遇混合C",
           index: "002058",
           unitValue: 1.077,
-          alipayQuantity: 79.6,
+          alipayQuantity: 96.60,
           wechatQuantity: 0,
           percent: 4.0,
         },
@@ -163,7 +163,7 @@ export default {
           name: "交银数据产业灵活配置混合",
           index: "519773",
           unitValue: 1.951,
-          alipayQuantity: 23.44,
+          alipayQuantity: 28.67,
           wechatQuantity: 0,
           percent: 2.3,
         },
