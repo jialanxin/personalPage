@@ -92,7 +92,7 @@ export default {
           index: "519755",
           unitValue: 1.397,
           alipayQuantity: 50.01,
-          wechatQuantity: 64.95,
+          wechatQuantity: 67.09,
           percent: 6.5,
         },
         {
@@ -108,7 +108,7 @@ export default {
           index: "519752",
           unitValue: 1.363,
           alipayQuantity: 43.98,
-          wechatQuantity: 52.26,
+          wechatQuantity: 54.38,
           percent: 5.5,
         },
         {
@@ -139,7 +139,7 @@ export default {
           name: "中银润利混合C",
           index: "003967",
           unitValue: 1.0707,
-          alipayQuantity: 88.76,
+          alipayQuantity: 105.02,
           wechatQuantity: 0,
           percent: 4.0,
         },
