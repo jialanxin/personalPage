@@ -53,7 +53,7 @@ export default {
           unitValue: 1.1639,
           alipayQuantity: 300.39,
           wechatQuantity: 0,
-          percent: 13.0,
+          percent: 13.01,
         },
         {
           name: "交银双轮动A/B",
@@ -61,7 +61,7 @@ export default {
           unitValue: 1.0602,
           alipayQuantity: 167.42,
           wechatQuantity: 158.85,
-          percent: 13.0,
+          percent: 12.93,
         },
         {
           name: "交银裕隆纯债债券A",
@@ -85,7 +85,7 @@ export default {
           unitValue: 1.0398,
           alipayQuantity: 64.51,
           wechatQuantity: 97.69,
-          percent: 6.16,
+          percent: 8.47,
         },
         {
           name: "交银多策略回报灵活配置混合A",
@@ -93,7 +93,7 @@ export default {
           unitValue: 1.397,
           alipayQuantity: 50.01,
           wechatQuantity: 71.38,
-          percent: 6.5,
+          percent: 6.58,
         },
         {
           name: "交银周期回报灵活配置混合A",
@@ -101,7 +101,7 @@ export default {
           unitValue: 1.252,
           alipayQuantity: 119.06,
           wechatQuantity: 0,
-          percent: 5.5,
+          percent: 5.55,
         },
         {
           name: "交银新回报灵活配置混合A",
@@ -109,7 +109,7 @@ export default {
           unitValue: 1.363,
           alipayQuantity: 43.98,
           wechatQuantity: 56.50,
-          percent: 5.5,
+          percent: 5.56,
         },
         {
           name: "交银新生活力灵活配置混合",
@@ -117,7 +117,7 @@ export default {
           unitValue: 2.933,
           alipayQuantity: 24.06,
           wechatQuantity: 9.73,
-          percent: 4.04,
+          percent: 3.68,
         },
         {
           name: "中银腾利混合C",
@@ -125,7 +125,7 @@ export default {
           unitValue: 1.076,
           alipayQuantity: 95.97,
           wechatQuantity: 0,
-          percent: 4.0,
+          percent: 4.04,
         },
         {
           name: "中银新机遇混合C",
@@ -133,7 +133,7 @@ export default {
           unitValue: 1.077,
           alipayQuantity: 96.60,
           wechatQuantity: 0,
-          percent: 4.0,
+          percent: 4.04,
         },
         {
           name: "中银润利混合C",
@@ -149,7 +149,7 @@ export default {
           unitValue: 1.078,
           alipayQuantity: 94.02,
           wechatQuantity: 0,
-          percent: 4.0,
+          percent: 4.02,
         },
         {
           name: "中银瑞利混合C",
@@ -157,15 +157,7 @@ export default {
           unitValue: 1.145,
           alipayQuantity: 105.52,
           wechatQuantity: 0,
-          percent: 4.0,
-        },
-        {
-          name: "交银数据产业灵活配置混合",
-          index: "519773",
-          unitValue: 1.951,
-          alipayQuantity: 33.94,
-          wechatQuantity: 0,
-          percent: 2.3,
+          percent: 4.04,
         },
         {
           name: "交银先进制造混合",
@@ -173,7 +165,7 @@ export default {
           unitValue: 1.951,
           alipayQuantity: 13.55,
           wechatQuantity: 0,
-          percent: 2.0,
+          percent: 2.06,
         },
       ],
     };
