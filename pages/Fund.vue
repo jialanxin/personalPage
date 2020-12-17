@@ -83,7 +83,7 @@ export default {
           name: "交银稳鑫短债债券A",
           index: "006793",
           unitValue: 1.0398,
-          alipayQuantity: 64.51,
+          alipayQuantity: 124.53,
           wechatQuantity: 97.69,
           percent: 8.47,
         },
