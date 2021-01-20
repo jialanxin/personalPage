@@ -67,7 +67,7 @@ export default {
           name: "交银裕隆纯债债券A",
           index: "519782",
           unitValue: 1.0398,
-          alipayQuantity: 311.43,
+          alipayQuantity: 326.20,
           wechatQuantity: 0.0,
           percent: 12.0,
         },
@@ -76,7 +76,7 @@ export default {
           index: "519718",
           unitValue: 1.0398,
           alipayQuantity: 244.29,
-          wechatQuantity: 50.59,
+          wechatQuantity: 56.24,
           percent: 10.0,
         },
         {
@@ -84,7 +84,7 @@ export default {
           index: "006793",
           unitValue: 1.0398,
           alipayQuantity: 124.53,
-          wechatQuantity: 128.17,
+          wechatQuantity: 143.37,
           percent: 8.47,
         },
         {
