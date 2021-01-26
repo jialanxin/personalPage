@@ -51,7 +51,7 @@ export default {
           name: "交银信用添利债券(LOF)",
           index: "164902",
           unitValue: 1.1639,
-          alipayQuantity: 361.90,
+          alipayQuantity: 377.24,
           wechatQuantity: 0,
           percent: 13.01,
         },
@@ -60,7 +60,7 @@ export default {
           index: "519723",
           unitValue: 1.0602,
           alipayQuantity: 167.42,
-          wechatQuantity: 232.75,
+          wechatQuantity: 238.44,
           percent: 12.93,
         },
         {
@@ -76,7 +76,7 @@ export default {
           index: "519718",
           unitValue: 1.0398,
           alipayQuantity: 244.29,
-          wechatQuantity: 61.89,
+          wechatQuantity: 67.53,
           percent: 10.0,
         },
         {
