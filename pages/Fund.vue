@@ -76,7 +76,7 @@ export default {
           index: "519718",
           unitValue: 1.0398,
           alipayQuantity: 257.41,
-          wechatQuantity: 73.19,
+          wechatQuantity: 78.85,
           percent: 10.0,
         },
         {
@@ -100,7 +100,7 @@ export default {
           index: "519738",
           unitValue: 1.252,
           alipayQuantity: 150.24,
-          wechatQuantity: 2.36,
+          wechatQuantity: 4.72,
           percent: 5.55,
         },
         {
@@ -108,7 +108,7 @@ export default {
           index: "519752",
           unitValue: 1.363,
           alipayQuantity: 53.48,
-          wechatQuantity: 79.30,
+          wechatQuantity: 81.35,
           percent: 5.56,
         },
         {
