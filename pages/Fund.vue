@@ -64,7 +64,7 @@ export default {
           index: "519723",
           initialValue: 1.0527,
           alipayQuantity: 355.73,
-          wechatQuantity: 290.65,
+          wechatQuantity: 296.33,
           initialPercent: 12.56,
         },
         {
@@ -96,7 +96,7 @@ export default {
           index: "519755",
           initialValue: 1.4150,
           alipayQuantity: 132.87,
-          wechatQuantity: 117.30,
+          wechatQuantity: 119.46,
           initialPercent: 6.61,
         },
         {
@@ -135,7 +135,7 @@ export default {
           name: "中银新机遇混合C",
           index: "002058",
           initialValue: 1.1360,
-          alipayQuantity: 194.36,
+          alipayQuantity: 210.95,
           wechatQuantity: 0,
           initialPercent: 4.16,
         },
