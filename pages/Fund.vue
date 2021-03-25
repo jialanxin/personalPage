@@ -77,7 +77,7 @@ export default {
           index: "519782",
           initialValue: 1.2264,
           initialPercent: 12.10,
-          alipayQuantity: 520.27,
+          alipayQuantity: 534.94,
           wechatQuantity: 0.0,
           qiemanQuantity: 0
         },
@@ -132,7 +132,7 @@ export default {
           initialValue: 1.2640,
           initialPercent: 5.59,
           alipayQuantity: 213.61,
-          wechatQuantity: 19.58,
+          wechatQuantity: 21.93,
           qiemanQuantity: 0
         },
         {
@@ -196,7 +196,7 @@ export default {
           initialPercent: 2.20,
           alipayQuantity: 0,
           wechatQuantity: 0,
-          qiemanQuantity: 0
+          qiemanQuantity: 4.71
         },
         {
           name: "交银先进制造混合",
