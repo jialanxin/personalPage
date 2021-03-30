@@ -106,7 +106,7 @@ export default {
           initialPercent: 5.00,
           alipayQuantity: 0,
           wechatQuantity: 0,
-          qiemanQuantity: 11.76
+          qiemanQuantity: 17.64
         },
         {
           name: "交银多策略回报灵活配置混合A",
@@ -115,7 +115,7 @@ export default {
           initialPercent: 6.64,
           alipayQuantity: 132.87,
           wechatQuantity: 119.46,
-          qiemanQuantity: 0
+          qiemanQuantity: 2.14
         },
         {
           name: "交银新回报灵活配置混合A",
@@ -196,7 +196,7 @@ export default {
           initialPercent: 2.20,
           alipayQuantity: 4.71,
           wechatQuantity: 0,
-          qiemanQuantity: 2.77
+          qiemanQuantity: 4.13
         },
         {
           name: "交银先进制造混合",
