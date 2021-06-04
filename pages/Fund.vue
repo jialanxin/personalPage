@@ -68,7 +68,7 @@ export default {
           index: "519723",
           initialValue: 1.0597,
           initialPercent: 12.86,
-          alipayQuantity: 698.12,
+          alipayQuantity: 727.24,
           wechatQuantity: 296.33,
           qiemanQuantity: 11.31
         },
@@ -176,7 +176,7 @@ export default {
           index: "002435",
           initialValue: 1.0950,
           initialPercent: 2.80,
-          alipayQuantity: 205.93,
+          alipayQuantity: 220.10,
           wechatQuantity: 0,
           qiemanQuantity: 0
         },
@@ -185,7 +185,7 @@ export default {
           index: "519772",
           initialValue: 3.1180,
           initialPercent: 2.50,
-          alipayQuantity: 47.27,
+          alipayQuantity: 52.14,
           wechatQuantity: 15.75,
           qiemanQuantity: 0
         },
