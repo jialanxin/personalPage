@@ -14,8 +14,10 @@
     "@nuxtjs/feed": "^1.1.0",
     "axios": "^0.21.1",
     "blueimp-md5": "^2.13.0",
+    "is-svg": "^4.3.1",
     "katex": "^0.11.1",
     "nuxt": "^2.0.0",
+    "postcss": "^8.3.0",
     "vue-code-highlight": "^0.7.4"
   },
   "devDependencies": {
