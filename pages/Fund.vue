@@ -59,7 +59,7 @@ export default {
           index: "164902",
           initialValue: 1.1795,
           initialPercent: 13.02,
-          alipayQuantity: 565.17,
+          alipayQuantity: 911.64,
           wechatQuantity: 31.57,
           qiemanQuantity: 0
         },
@@ -68,16 +68,16 @@ export default {
           index: "519723",
           initialValue: 1.0597,
           initialPercent: 12.86,
-          alipayQuantity: 355.73,
+          alipayQuantity: 756.38,
           wechatQuantity: 296.33,
-          qiemanQuantity: 0
+          qiemanQuantity: 11.31
         },
         {
           name: "交银裕隆纯债债券A",
           index: "519782",
           initialValue: 1.2264,
           initialPercent: 12.10,
-          alipayQuantity: 520.27,
+          alipayQuantity: 853.45,
           wechatQuantity: 0.0,
           qiemanQuantity: 0
         },
@@ -86,16 +86,16 @@ export default {
           index: "519718",
           initialValue: 1.0697,
           initialPercent: 9.97,
-          alipayQuantity: 385.02,
+          alipayQuantity: 699.72,
           wechatQuantity: 113.67,
-          qiemanQuantity: 0
+          qiemanQuantity: 5.61
         },
         {
           name: "交银稳鑫短债债券A",
           index: "006793",
           initialValue: 1.0591,
           initialPercent: 8.42,
-          alipayQuantity: 281.81,
+          alipayQuantity: 562.17,
           wechatQuantity: 173.77,
           qiemanQuantity: 0
         },
@@ -104,25 +104,25 @@ export default {
           index: "006367",
           initialValue: 1.0200,
           initialPercent: 5.00,
-          alipayQuantity: 0,
+          alipayQuantity: 398.22,
           wechatQuantity: 0,
-          qiemanQuantity: 0
+          qiemanQuantity: 23.51
         },
         {
           name: "交银多策略回报灵活配置混合A",
           index: "519755",
           initialValue: 1.3970,
           initialPercent: 6.64,
-          alipayQuantity: 132.87,
+          alipayQuantity: 282.10,
           wechatQuantity: 119.46,
-          qiemanQuantity: 0
+          qiemanQuantity: 2.14
         },
         {
           name: "交银新回报灵活配置混合A",
           index: "519752",
           initialValue: 1.4550,
           initialPercent: 5.61,
-          alipayQuantity: 115.32,
+          alipayQuantity: 240.51,
           wechatQuantity: 92.16,
           qiemanQuantity: 0
         },
@@ -131,8 +131,8 @@ export default {
           index: "519738",
           initialValue: 1.2640,
           initialPercent: 5.59,
-          alipayQuantity: 213.61,
-          wechatQuantity: 19.58,
+          alipayQuantity: 357.95,
+          wechatQuantity: 21.93,
           qiemanQuantity: 0
         },
         {
@@ -140,7 +140,7 @@ export default {
           index: "002414",
           initialValue: 1.1520,
           initialPercent: 3.00,
-          alipayQuantity: 198.25,
+          alipayQuantity: 225.33,
           wechatQuantity: 0,
           qiemanQuantity: 0
         },
@@ -149,7 +149,7 @@ export default {
           index: "003967",
           initialValue: 1.0929,
           initialPercent: 3.00,
-          alipayQuantity: 202.60,
+          alipayQuantity: 231.22,
           wechatQuantity: 0,
           qiemanQuantity: 0
         },
@@ -158,7 +158,7 @@ export default {
           index: "002503",
           initialValue: 1.0970,
           initialPercent: 2.90,
-          alipayQuantity: 192.96,
+          alipayQuantity: 221.36,
           wechatQuantity: 0,
           qiemanQuantity: 0
         },
@@ -167,7 +167,7 @@ export default {
           index: "002058",
           initialValue: 1.0850,
           initialPercent: 2.90,
-          alipayQuantity: 210.95,
+          alipayQuantity: 225.22,
           wechatQuantity: 0,
           qiemanQuantity: 0
         },
@@ -176,7 +176,7 @@ export default {
           index: "002435",
           initialValue: 1.0950,
           initialPercent: 2.80,
-          alipayQuantity: 191.73,
+          alipayQuantity: 220.10,
           wechatQuantity: 0,
           qiemanQuantity: 0
         },
@@ -185,7 +185,7 @@ export default {
           index: "519772",
           initialValue: 3.1180,
           initialPercent: 2.50,
-          alipayQuantity: 47.27,
+          alipayQuantity: 52.14,
           wechatQuantity: 15.75,
           qiemanQuantity: 0
         },
@@ -194,16 +194,16 @@ export default {
           index: "519779",
           initialValue: 2.1220,
           initialPercent: 2.20,
-          alipayQuantity: 0,
+          alipayQuantity: 84.81,
           wechatQuantity: 0,
-          qiemanQuantity: 0
+          qiemanQuantity: 5.49
         },
         {
           name: "交银先进制造混合",
           index: "519704",
           initialValue: 4.0148,
           initialPercent: 1.49,
-          alipayQuantity: 28.20,
+          alipayQuantity: 30.47,
           wechatQuantity: 0,
           qiemanQuantity: 0
         },
