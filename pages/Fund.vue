@@ -79,7 +79,7 @@ export default {
           initialPercent: 13.10,
           alipayQuantity: 946.66,
           wechatQuantity: 0.0,
-          qiemanQuantity: 0
+          qiemanQuantity: 4.82
         },
         {
           name: "交银纯债A/B",
@@ -88,7 +88,7 @@ export default {
           initialPercent: 11.90,
           alipayQuantity: 838.27,
           wechatQuantity: 113.67,
-          qiemanQuantity: 5.61
+          qiemanQuantity: 11.18
         },
         {
           name: "交银稳鑫短债债券A",
@@ -97,7 +97,7 @@ export default {
           initialPercent: 10.61,
           alipayQuantity: 687.49,
           wechatQuantity: 173.77,
-          qiemanQuantity: 0
+          qiemanQuantity: 15.07
         },
         {
           name: "交银裕祥纯债债券A",
