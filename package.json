@@ -15,7 +15,7 @@
     "axios": "^0.28.0",
     "blueimp-md5": "^2.19.0",
     "katex": "^0.16.21",
-    "nuxt": "^2.18.1",
+    "nuxt": "^3.12.4",
     "vue-code-highlight": "^0.7.8"
   },
   "devDependencies": {
