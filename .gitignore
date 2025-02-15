@@ -58,7 +58,7 @@ typings/
 
 # pnpm-specific files
 .pnpm-debug.log
-pnpm-lock.yaml
+# pnpm-lock.yaml
 
 # dotenv environment variables file
 .env
