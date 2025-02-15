@@ -14,7 +14,7 @@
     "@nuxtjs/feed": "^1.1.0",
     "axios": "^0.21.4",
     "blueimp-md5": "^2.19.0",
-    "katex": "^0.11.1",
+    "katex": "^0.16.21",
     "nuxt": "^2.18.1",
     "vue-code-highlight": "^0.7.8"
   },
