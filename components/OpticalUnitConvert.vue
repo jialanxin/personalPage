@@ -27,9 +27,10 @@
 </template>
 
 <script>
-export default {
+import { defineComponent } from 'vue';
+export default defineComponent({
   name: "OpticalUnitConvert",
-  data() {
+  data: () => ({
     return {
       energy: "",
       wavelenth: "",
@@ -38,7 +39,7 @@ export default {
       e: 1.602176634e-19
     };
   },
-  methods: {
+  methods: () => ({
     nm2eV() {
       this.energy = ((this.c * this.h * 1e9) / this.e / this.wavelenth).toFixed(
         2
@@ -48,7 +49,7 @@ export default {
       this.wavelenth = ((this.c * this.h * 1e9) / this.e / this.energy).toFixed(
         2
       );
-    }
+    }),
   }
 };
 </script>

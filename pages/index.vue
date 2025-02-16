@@ -20,73 +20,53 @@
       </v-row>
       <v-row>
         <v-col>
-          <v-pagination v-model="page_blue" :length="numOfPages" @input="this.goToPageNum"></v-pagination>
+          <v-pagination v-model="page_blue" :length="numOfPages" @input="goToPageNum"></v-pagination>
         </v-col>
       </v-row>
     </v-container>
   </div>
 </template>
 
-<script>
-import json from "./posts.json";
-export default {
-  data() {
-    return {
-      page_blue: undefined,
-      page: undefined,
-      posts: json
-    };
-  },
-  head() {
-    return {
-      title: "首页"
-    };
-  },
-  created: function() {
-    if (this.$route.query.page == undefined) {
-      this.page = 1;
-      this.page_blue = this.page;
-    } else if (this.$route.query.page > this.numOfPages) {
-      this.page = this.numOfPages;
-      this.page_blue = this.page;
-    } else {
-      this.page = Number(this.$route.query.page);
-      this.page_blue = this.page;
-    }
-  },
-  methods: {
-    goToPageNum(num) {
-      if (num < 1) {
-        this.$router.push({ path: "", query: { page: "1" } });
-      } else if (num > this.numOfPages) {
-        this.$router.push({ path: "", query: { page: this.numOfPages } });
-      } else {
-        this.$router.push({ path: "", query: { page: num } });
-      }
-    }
-  },
-  beforeRouteUpdate: function(to, from, next) {
-    if (to.query.page == undefined) {
-      this.page = 1;
-      this.page_blue = this.page;
-    } else {
-      this.page = Number(to.query.page);
-      this.page_blue = this.page;
-    }
-    next();
-  },
-  computed: {
-    numOfPages: function() {
-      return Math.ceil(this.posts.length / 5);
-    },
-    shownPosts: function() {
-      var beginIndex = (this.page - 1) * 5;
-      var endIndex = this.page * 5;
-      if (endIndex > this.posts.length - 1) {
-        endIndex = this.posts.length;
-      }
-      return this.posts.slice(beginIndex, endIndex);
-    }
+<script setup>
+import { ref, computed } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
+import json from "./posts.json"
+
+const route = useRoute()
+const router = useRouter()
+
+const page_blue = ref(undefined)
+const page = ref(undefined)
+const posts = ref(json)
+
+if (route.query.page == undefined) {
+  page.value = 1
+  page_blue.value = page.value
+} else if (route.query.page > numOfPages.value) {
+  page.value = numOfPages.value
+  page_blue.value = page.value
+} else {
+  page.value = Number(route.query.page)
+  page_blue.value = page.value
+}
+
+const numOfPages = computed(() => Math.ceil(posts.value.length / 5))
+const shownPosts = computed(() => {
+  const beginIndex = (page.value - 1) * 5
+  let endIndex = page.value * 5
+  if (endIndex > posts.value.length - 1) {
+    endIndex = posts.value.length
   }
-};
+  return posts.value.slice(beginIndex, endIndex)
+})
+
+function goToPageNum(num) {
+  if (num < 1) {
+    router.push({ path: "", query: { page: "1" } })
+  } else if (num > numOfPages.value) {
+    router.push({ path: "", query: { page: numOfPages.value } })
+  } else {
+    router.push({ path: "", query: { page: num } })
+  }
+}
 </script>
