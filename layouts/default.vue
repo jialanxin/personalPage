@@ -23,7 +23,7 @@
       </v-btn>
     </v-app-bar>
     <v-main>
-      <nuxt />
+      <NuxtPage />
     </v-main>
     <v-footer absolute app>
       <span>
@@ -36,42 +36,38 @@
   </v-app>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      drawer: false,
-      fixed: false,
-      clipped: true,
-      items: [
-        {
-          icon: "mdi-apps",
-          title: "Home",
-          to: "/",
-        },
-        {
-          icon: "mdi-book-open-variant",
-          title: "Reading Notes",
-          to: "/notes",
-        },
-        {
-          icon: "mdi-timeline-text",
-          title: "Moments",
-          to: "/moments",
-        },
-        {
-          icon: "mdi-chart-bubble",
-          title: "Tools",
-          to: "/Tools",
-        },
-        {
-          icon: "mdi-currency-usd",
-          title: "Fund",
-          to: "/Fund",
-        },
-      ],
-      title: "My Personal Page",
-    };
+<script setup>
+import { ref } from 'vue';
+
+const drawer = ref(false);
+const clipped = ref(true);
+const title = ref("My Personal Page");
+
+const items = ref([
+  {
+    icon: "mdi-apps",
+    title: "Home",
+    to: "/",
   },
-};
+  {
+    icon: "mdi-book-open-variant",
+    title: "Reading Notes",
+    to: "/notes",
+  },
+  {
+    icon: "mdi-timeline-text",
+    title: "Moments",
+    to: "/moments",
+  },
+  {
+    icon: "mdi-chart-bubble",
+    title: "Tools",
+    to: "/Tools",
+  },
+  {
+    icon: "mdi-currency-usd",
+    title: "Fund",
+    to: "/Fund",
+  },
+]);
 </script>
