@@ -1,9 +1,7 @@
 <template>
   <v-container>
     <v-row>
-      <v-col>
-        <h1>{{title}}</h1>
-      </v-col>
+     极客时间
     </v-row>
     <v-row>
       <v-col>
@@ -30,7 +28,8 @@
         <p>第四个坑是因为调试，访问了网站太多遍，导致cloudflare缓存了一部分过期的html和js，导致加载js的时候404，html是缓存的，js却命中了主机，当然是找不到文件的。</p>
         <p>
           在使用github actions之后，一部分的配置命令从
-          <code>Dockerfile</code>转移到了
+          <code>极客时间
+          </code>转移到了
           <code>action.yml</code>里，例如下载caddy之类的，镜像编写变得简单了。部署的时候不是每一次都要重新build了，直接pull新镜像就可以了。当然了https的证书是挂在镜像外面的。
         </p>
       </v-col>
@@ -38,24 +37,16 @@
   </v-container>
 </template>
 
-<script>
-import json from "../posts.json";
-export default {
-  data() {
-    return {
-      title: "用Github actions发布博客之踩坑",
-      lastUpdate: ""
-    };
-  },
-  created() {
-    this.lastUpdate = json.find(post => {
-      return post.title === this.title
-    }).lastUpdate;
-  },
-  head() {
-    return {
-      title: this.title
-    };
-  }
-};
+<script setup>
+import { ref, onMounted } from 'vue'
+import json from "../posts.json"
+
+const title = ref("用Github actions发布博客之踩坑")
+const lastUpdate = ref("")
+
+onMounted(() => {
+  lastUpdate.value = json.find(post => {
+    return post.title === title.value
+  }).lastUpdate
+})
 </script>

@@ -7,6 +7,7 @@
     </v-row>
     <v-row>
       <v-col>
+        <极客时间
         <p class="font-weight-light">latest update: {{lastUpdate}}</p>
       </v-col>
     </v-row>
@@ -18,19 +19,16 @@
   </v-container>
 </template>
 
-<script>
-import json from "../pages/posts.json";
-export default {
-  props: ["posttitle"],
-  data() {
-    return {
-      lastUpdate: ""
-    };
-  },
-  created() {
-    this.lastUpdate = json.find(post => {
-      return post.title === this.posttitle;
-    }).lastUpdate;
-  }
-};
+<script setup>
+import { ref, onMounted, defineProps } from 'vue'
+import json from "../pages/posts.json"
+
+const props = defineProps(['posttitle'])
+const lastUpdate = ref("")
+
+onMounted(() => {
+  lastUpdate.value = json.find(post => {
+    return post.title === props.posttitle
+  }).lastUpdate
+})
 </script>

@@ -7,7 +7,7 @@
       <v-container>
         <v-row align="center" justify="center">
           <v-col>
-            <v-text-field label="Value+Key" v-model="value" @keyup.enter="tomd5"></v-text-field>
+            <v-text-field label="Value+Key" v-model="value" @keyup.enter.prevent="tomd5"></v-text-field>
           </v-col>
         </v-row>
         <v-row align="center" justify="center">
@@ -19,8 +19,9 @@
 </template>
 
 <script>
+import { defineComponent } from 'vue';
 import md5 from "blueimp-md5"
-export default {
+export default defineComponent({
   name: "md5",
   data() {
     return {
@@ -29,9 +30,9 @@ export default {
     };
   },
   methods: {
-      tomd5(){
-          this.hex = md5(this.value)
-      }
+    tomd5() {
+      this.hex = md5(this.value);
     }
-};
+  }
+});
 </script>

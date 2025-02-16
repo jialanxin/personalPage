@@ -20,24 +20,16 @@
   </v-container>
 </template>
 
-<script>
-import json from "../posts.json";
-export default {
-  data() {
-    return {
-      title: "人是虫，思想是草",
-      lastUpdate: ""
-    };
-  },
-  created() {
-    this.lastUpdate = json.find(post => {
-      return post.title === this.title;
-    }).lastUpdate;
-  },
-  head() {
-    return {
-      title: this.title
-    };
-  }
-};
+<script setup>
+import { ref, onMounted } from 'vue'
+import json from "../posts.json"
+
+const title = ref("人是虫，思想是草")
+const lastUpdate = ref("")
+
+onMounted(() => {
+  lastUpdate.value = json.find(post => {
+    return post.title === title.value
+  }).lastUpdate
+})
 </script>

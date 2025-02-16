@@ -1,4 +1,23 @@
 export default defineNuxtConfig({
+  build: {
+    transpile: ['vuetify'],
+    rollupOptions: {
+      external: [
+        '@mdi/font/css/materialdesignicons.css',
+        '@mdi/font/css/materialdesignicons.min.css'
+      ]
+    }
+  },
+  vite: {
+    define: {
+      'process.env.DEBUG': false,
+    },
+    css: {
+      preprocessorOptions: {
+        scss: {}
+      }
+    }
+  },
   app: {
     head: {
       titleTemplate: '%s - 个人页面',
@@ -9,51 +28,33 @@ export default defineNuxtConfig({
         { name: 'description', content: process.env.npm_package_description || '' }
       ],
       link: [
-        { rel: 'icon', type: 'image/svg', href: '/crystal.svg' }
+        { rel: 'icon', type: 'image/svg', href: '/crystal.svg' },
+        { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/@mdi/font@7.0.0/css/materialdesignicons.min.css' }
       ]
     }
   },
   css: [
-    'vuetify/styles',
-    '@mdi/font/css/materialdesignicons.css'
+    'vuetify/lib/styles/main.sass',
+    '@/assets/variables.scss'
   ],
-  plugins: [],
   modules: [
-    '@nuxtjs/feed',
-    '@nuxtjs/google-fonts',
-    'vuetify'
+    '@nuxtjs/google-fonts'
   ],
-  feed: {
-    rss: true,
-    json: true,
-    async setup() {
-      const {  content } = await useFetch('/posts.json')
-      return [
-        {
-          path: '/feed.xml',
-          type: 'rss2',
-          cacheTime: 1000 * 60 * 15,
-          async create() {
-            return {
-              title: 'My personal page',
-              link: 'https://lxj230.xyz/feed.xml',
-              description: 'Welcome to my personal page',
-              items: content.value
-            }
-          }
-        }
-      ]
-    }
-  },
   googleFonts: {
     families: {
       Roboto: [400, 700]
     }
   },
   vuetify: {
-    defaultAssets: {
-      font: true,
-      icons: 'mdi'
+    vuetifyOptions: {
+      defaults: {
+        global: {
+          ripple: false
+        }
+      },
+      theme: {
+        defaultTheme: 'light'
+      }
     }
   }
 })

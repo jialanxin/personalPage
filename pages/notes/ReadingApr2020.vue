@@ -14,7 +14,7 @@
       <v-col>
         <v-expansion-panels multiple v-model="expanded">
           <ReadingPanel>
-            <template v-slot:chinese_title>激光可调的外延生长的MoS2和Bi2Se3异质结</template>
+            <template v-slot:chinese_title>激光调的外延生长的MoS2和Bi2Se3异质结</template>
             <template
               v-slot:english_title
             >Tunable and laser-reconfigurable 2D heterocrystals obtained by epitaxial stacking of crystallographically incommensurate Bi2Se3 and MoS2 atomic layers</template>
@@ -74,31 +74,22 @@
   </v-container>
 </template>
 
-<script>
-import ReadingPanel from "../../components/ReadingPanel.vue";
-export default {
-  components: { ReadingPanel },
-  data() {
-    return {
-      title: "4月读书笔记",
-      expanded: [],
-      expand: false,
-      numOfArticles: 3
-    };
-  },
-  methods: {
-    expandOrHide: function() {
-      if (this.expand === false) {
-        this.expanded = [...Array(this.numOfArticles).keys()];
-        this.expand = true;
-      } else {
-        this.expanded = [];
-        this.expand = false;
-      }
-    }
-  },
-  head() {
-    return { title: this.title };
+<script setup>
+import { ref } from 'vue'
+import ReadingPanel from "../../components/ReadingPanel.vue"
+
+const title = ref("4月读书笔记")
+const expanded = ref([])
+const expand = ref(false)
+const numOfArticles = ref(3)
+
+function expandOrHide() {
+  if (expand.value === false) {
+    expanded.value = [...Array(numOfArticles.value).keys()]
+    expand.value = true
+  } else {
+    expanded.value = []
+    expand.value = false
   }
-};
+}
 </script>

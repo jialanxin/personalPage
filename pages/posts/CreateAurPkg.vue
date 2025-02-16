@@ -7,31 +7,31 @@
           <v-icon>mdi-github</v-icon>afc163/fanyi
         </v-btn>这个项目，而且也没有人在aur里打过包，所以我来试一次打包了。
       </p>
-      <vue-code-highlight language="shell">
-# Maintainer: lstnbl &lt;******@****.**&gt;
-_npmname=fanyi
-pkgname=node-$_npmname
-pkgver=4.2.0
-pkgrel=1
-pkgdesc="A CN and US translate tool in your command line."
-arch=('any')
-url="https://github.com/afc163/fanyi"
-license=('MIT')
-depends=('nodejs' 'festival')
-makedepends=('npm')
-source=(https://github.com/afc163/$_npmname/archive/v$pkgver.tar.gz)
-noextract=("v$pkgver.tar.gz")
-sha256sums=('SKIP')
-package() {
-    npm install \
-        --user root --global \
-        --prefix "$pkgdir/usr" \
-        "$srcdir"/v$pkgver.tar.gz
-    find "$pkgdir/usr" -type d -exec chmod 755 '{}' +
-    install -Dm0644 "$pkgdir/usr/lib/node_modules/$_npmname/LICENSE" \
-        "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
-}
-      </vue-code-highlight>
+      <pre><code class="language-shell">
+      # Maintainer: lstnbl &lt;******@****.**&gt;
+      _npmname=fanyi
+      pkgname=node-$_npmname
+      pkgver=4.2.0
+      pkgrel=1
+      pkgdesc="A CN and US translate tool in your command line."
+      arch=('any')
+      url="https://github.com/afc163/fanyi"
+      license=('MIT')
+      depends=('nodejs' 'festival')
+      makedepends=('npm')
+      source=(https://github.com/afc163/$_npmname/archive/v$pkgver.tar.gz)
+      noextract=("v$pkgver.tar.gz")
+      sha256sums=('SKIP')
+      package() {
+          npm install \
+              --user root --global \
+              --prefix "$pkgdir/usr" \
+              "$srcdir"/v$pkgver.tar.gz
+          find "$pkgdir/usr" -type d -exec chmod 755 '{}' +
+          install -Dm0644 "$pkgdir/usr/lib/node_modules/$_npmname/LICENSE" \
+              "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+      }
+      </code></pre>
       <p>
         整个PKGBUILD文件如图，前几行申明一些名称和版本信息。
         <code>depends</code>和
@@ -50,12 +50,8 @@ package() {
 
 <script>
 import posttemplate from "../../components/posttemplate";
-import { component as VueCodeHighlight } from "vue-code-highlight";
-import "vue-code-highlight/themes/prism-coy.css";
-import "prism-es6/components/prism-markup-templating";
-import "prism-es6/components/prism-bash";
 export default {
-  components: { posttemplate, VueCodeHighlight },
+  components: { posttemplate },
   data() {
     return {
       title: "创建一个aur包"

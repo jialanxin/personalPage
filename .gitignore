@@ -103,3 +103,5 @@ feed.xml
 # vscode config
 
 .vscode/
+.aider*
+.output/
