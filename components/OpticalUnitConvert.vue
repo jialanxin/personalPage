@@ -10,7 +10,7 @@
             <v-text-field label="Energy(eV)" v-model="energy"></v-text-field>
           </v-col>
           <v-col cols="4">
-            <v-btn color="primary" small @click="eV2nm">convert</v-btn>
+            <v-btn color="primary" @click="eV2nm">convert</v-btn>
           </v-col>
         </v-row>
         <v-row align="center" justify="center">
@@ -18,7 +18,7 @@
             <v-text-field label="Wavelenth(nm)" v-model="wavelenth"></v-text-field>
           </v-col>
           <v-col cols="4">
-            <v-btn color="primary" small @click="nm2eV">convert</v-btn>
+            <v-btn color="primary" @click="nm2eV">convert</v-btn>
           </v-col>
         </v-row>
       </v-container>
@@ -26,30 +26,20 @@
   </v-card>
 </template>
 
-<script>
-import { defineComponent } from 'vue';
-export default defineComponent({
-  name: "OpticalUnitConvert",
-  data: () => ({
-    return {
-      energy: "",
-      wavelenth: "",
-      c: 2.99792458e8,
-      h: 6.62607004e-34,
-      e: 1.602176634e-19
-    };
-  },
-  methods: () => ({
-    nm2eV() {
-      this.energy = ((this.c * this.h * 1e9) / this.e / this.wavelenth).toFixed(
-        2
-      );
-    },
-    eV2nm() {
-      this.wavelenth = ((this.c * this.h * 1e9) / this.e / this.energy).toFixed(
-        2
-      );
-    }),
-  }
-};
+<script setup>
+import { ref } from 'vue';
+
+const energy = ref('')
+const wavelenth = ref('')
+const c = 2.99792458e8
+const h = 6.62607004e-34
+const e = 1.602176634e-19
+
+function nm2eV() {
+  energy.value = ((c * h * 1e9) / e / wavelenth.value).toFixed(2)
+}
+
+function eV2nm() {
+  wavelenth.value = ((c * h * 1e9) / e / energy.value).toFixed(2)
+}
 </script>

@@ -9,12 +9,13 @@
       <v-row>
         <v-col>
           <v-list two-line>
-            <v-list-item v-for="(post,i) in shownPosts" :key="i" :to="post.link" nuxt>
-              <v-list-item-content>
-                <v-list-item-title v-text="post.title"></v-list-item-title>
-                <v-list-item-subtitle v-text="post.lastUpdate"></v-list-item-subtitle>
-              </v-list-item-content>
-            </v-list-item>
+            <v-list-item
+              v-for="(post,i) in shownPosts"
+              :key="i"
+              :to="post.link"
+              :title="post.title"
+              :subtitle="post.lastUpdate"
+            />
           </v-list>
         </v-col>
       </v-row>
