@@ -17,13 +17,14 @@ export default defineNuxtConfig({
   plugins: [],
   modules: [
     '@nuxtjs/feed',
-    '@nuxtjs/google-fonts'
+    '@nuxtjs/google-fonts',
+    'vuetify'
   ],
   feed: {
     rss: true,
     json: true,
     async setup() {
-      const { data: content } = await useFetch('/posts.json')
+      const {  content } = await useFetch('/posts.json')
       return [
         {
           path: '/feed.xml',
@@ -44,6 +45,12 @@ export default defineNuxtConfig({
   googleFonts: {
     families: {
       Roboto: [400, 700]
+    }
+  },
+  vuetify: {
+    defaultAssets: {
+      font: true,
+      icons: 'mdi'
     }
   }
 })

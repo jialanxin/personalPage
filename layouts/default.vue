@@ -2,13 +2,19 @@
   <v-app dark>
     <v-navigation-drawer v-model="drawer" :clipped="clipped" fixed app>
       <v-list>
-        <v-list-item v-for="(item, i) in items" :key="i" :to="item.to" router exact>
-          <v-list-item-action>
-            <v-icon>{{ item.icon }}</v-icon>
-          </v-list-item-action>
-          <v-list-item-content>
-            <v-list-item-title v-text="item.title" />
-          </v-list-item-content>
+        <v-list-item
+          v-for="(item, i) in items"
+          :key="i"
+          :to="item.to"
+          router
+          exact
+        >
+          <v-list-item-title>
+            <v-list-item-subtitle>
+              <v-icon start>{{ item.icon }}</v-icon>
+              {{ item.title }}
+            </v-list-item-subtitle>
+          </v-list-item-title>
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
@@ -28,7 +34,11 @@
     <v-footer absolute app>
       <span>
         &copy; 2019-2020 Open sources and contact me on
-        <v-btn x-small dark href="https://github.com/jialanxin/personalPage/issues">
+        <v-btn
+          color="primary"
+          variant="text"
+          href="https://github.com/jialanxin/personalPage/issues"
+        >
           <v-icon>mdi-github</v-icon>issue
         </v-btn>.
       </span>
