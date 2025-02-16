@@ -13,7 +13,10 @@ export default defineNuxtConfig({
       ]
     }
   },
-  css: [],
+  css: [
+    'vuetify/styles',
+    '@mdi/font/css/materialdesignicons.css'
+  ],
   plugins: [],
   modules: [
     '@nuxtjs/feed',
